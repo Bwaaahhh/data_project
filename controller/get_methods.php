@@ -16,15 +16,3 @@
 
 	   }
    }
-
-     else if (isset($_GET['categorie'])) {
-
-       $query = $pdo->query("SELECT * FROM articles WHERE nom_categorie='".$_GET['categorie']."' ORDER BY nom_categorie DESC");
-
-     }
-
-     else if (isset($_GET['article'])) {
-
-       $query = $pdo->query("SELECT * FROM articles WHERE id_article='".$_GET['article']."'");
-
-     }
