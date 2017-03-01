@@ -81,6 +81,15 @@ class Planete{
         return $query->fetchAll();
     }
 
+    public function getSameStarPlanete($starName){
+        global $dbh;
+        $query = $dbh->prepare('SELECT nom FROM planete WHERE star_name = :starName');
+        $query = execute(array(
+            "starName" => $starName
+        ));
+        return $query->fetchAll;
+    }
+
     public function GetSpecialPlanete($planeteName){
         global $dbh;
         $query = $dbh->prepare("SELECT * FROM planete WHERE nom = :planeteName ");
