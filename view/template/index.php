@@ -6,7 +6,6 @@
     </head>
     <body>
         <header>
-            <p>test1</p>
         </header>
         <main>
            <?php include($page); ?>
