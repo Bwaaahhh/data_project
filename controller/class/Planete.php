@@ -12,7 +12,7 @@ class Planete{
         global $dbh;
         $idPlanete = $_GET['id_planete'];
         $query = $dbh->prepare('SELECT * FROM planete WHERE id = :idPlanete ');
-        $query = execute(array(
+        $query -> execute(array(
             "idPlanete" => $idPlanete+1
         ));
         return $query->fetchAll();
@@ -84,16 +84,16 @@ class Planete{
     public function getSameStarPlanete($starName){
         global $dbh;
         $query = $dbh->prepare('SELECT nom FROM planete WHERE star_name = :starName');
-        $query = execute(array(
+        $query -> execute(array(
             "starName" => $starName
         ));
-        return $query->fetchAll;
+        return $query->fetchAll();
     }
 
     public function GetSpecialPlanete($planeteName){
         global $dbh;
         $query = $dbh->prepare("SELECT * FROM planete WHERE nom = :planeteName ");
-        $query = execute(array(
+        $query -> execute(array(
             "planeteName" => $planeteName
         ));
         return $query->fetchAll();
@@ -102,7 +102,7 @@ class Planete{
     public function searchPlanete($planeteName){
         global $dbh;
         $query = $dbh->prepare("SELECT * FROM planete WHERE nom LIKE %:planeteName% ");
-        $query = execute(array(
+        $query -> execute(array(
             "planeteName" => $planeteName
         ));
         return $query->fetchAll();
