@@ -9,7 +9,7 @@
 					<p>Année de découverte : <?= $row->discovered ?>"</p>
 					<p>Méthode de détection : <?= $row->detection_type?></p>
 					<p>Système stellaire : <?= $row->star_name ?></p>
-					
+					<?php var_dump($row->star_name);?>
 					<?php $sister = $planete->getSameStarPlanete($row->star_name);
 					foreach ($sister as $sis) :?>
 					
@@ -20,7 +20,20 @@
 					<p>Masse : <?= $row->mass?> M(jupiter)</p>
 					<p>Rayon : <?= $row->radius?> R(jupiter)</p>
 					<p>Période orbitale : <?= $row->orbital_period?></p>
-					<p>Température mesurée : <?= $row->temperature_measured?>K</p>
+					<p>Température 
+					<?php
+					if ($row->temp_calculated != '0') {
+						?>
+						calculée : <?= $row->temp_calculated?>K</p>
+						
+					<?php }else if ($row->temp_measured != '0') {
+						?>
+						mesurée : <?= $row->temp_measured?>K</p>
+					<?php}
+					else {
+							?>: Non défini </p>
+					<?php}?>
+					
 					<p>Molécules détectées : <?= $row->molecules?></p>
 					
 				</div>
