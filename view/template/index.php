@@ -9,7 +9,7 @@
             <p>test1</p>
         </header>
         <main>
-            <?php include($page) ?>
+           <?php include($page); ?>
         </main>
         <footer>
 
