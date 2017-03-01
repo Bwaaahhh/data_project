@@ -13,7 +13,7 @@ class Planete{
         $idPlanete = $_GET['id_planete'];
         $query = $dbh->prepare('SELECT * FROM planete WHERE id = :id_planete ');
         $query = execute(array(
-            "id_planete" => $idPlanete+1 ;
+            "id_planete" => $idPlanete+1
         ));
         return $query->fetchAll();
     }
@@ -23,7 +23,7 @@ class Planete{
         $idPlanete = $_GET['id_planete'];
         $query = $dbh->prepare('SELECT * FROM planete WHERE id = :id_planete');
         $query = execute(array(
-            "id_planete" => $idPlanete-1 ;
+            "id_planete" => $idPlanete-1
         ));
         return $query->fecthAll();
     }
