@@ -6,6 +6,7 @@
     </head>
     <body>
         <header>
+          <p>pouet</p>
         </header>
         <main>
            <?php include($page); ?>

@@ -7,10 +7,10 @@
 			<p>Année de découverte : <?= $row->discovered ?></p>
 			<p>Méthode de détection : <?= $row->detection_type ?></p>
 			<p>Système stellaire : <?= $row->star_name ?></p>
-			<?php $sister = $planete->getSameStarPlanete($row->star_name);
-			foreach ($sister as $sis) :?>
+			<?php $sister = $planete->getSameStarPlanete($row->star_name); ?>
+			<p>Planète(s) soeur(s)</p>
+			<?php foreach ($sister as $sis) :?>
 
-				<p>Planète(s) soeur(s)</p>
 				<p><?= $sis->nom ?></p>
 			<?php endforeach; ?>
 
