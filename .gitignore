@@ -2,3 +2,6 @@
 .ftpconfig
 vendor/*
 pdo.php
+.sass-cache
+
+*.scssc
