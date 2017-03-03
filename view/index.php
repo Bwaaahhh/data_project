@@ -1,6 +1,7 @@
 <button id='pop'>Afficher popup</button>
 <div id="popup" class="">
 	<?php	include ("controller/get_methods.php"); ?>
+	<button id="close">Fermer</button>
 		<?php foreach ($result as $row) :?>
 		<div class='planetdata'>
 			<img src=''>
@@ -52,8 +53,5 @@
 		<button id='prev' href="index.php?planet="<?=$row->nom?>>Planète Précédente</button>
 		<?php endforeach;?>
 		</div>
-<script src='view/js/popup.js'></script>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"</script>
 <?php require ('view/js/ajax.js');?>
-<button id="close">Fermer</button>
 </div>

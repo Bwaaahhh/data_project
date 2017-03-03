@@ -71,7 +71,7 @@ class Planete{
 
     public function getPlaneteByTransit($item=0){
         global $dbh;
-        $query = $dvh->query("SELECT * FROM planete WHERE detection_type = 'Primary Transit' LIMIT '.$item.' , 1");
+        $query = $dbh->query("SELECT * FROM planete WHERE detection_type = 'Primary Transit' LIMIT '.$item.' , 1");
         return $query->fetchAll();
     }
 

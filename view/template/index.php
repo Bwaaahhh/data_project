@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="view/css/style.css">
         <link rel="stylesheet" href="view/css/fram/bootstrap.min.css">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src='view/js/popup.js'></script>
         <title>Data_Project</title>
     </head>
     <body>
