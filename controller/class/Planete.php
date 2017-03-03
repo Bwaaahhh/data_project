@@ -25,7 +25,7 @@ class Planete{
         $query = execute(array(
             "id_planete" => $idPlanete-1
         ));
-        return $query->fecthAll();
+        return $query->fetchAll();
     }
 
     public function getHotestPlanete($item=0){
@@ -101,10 +101,10 @@ class Planete{
 
     public function searchPlanete($planeteName){
         global $dbh;
-        $query = $dbh->prepare("SELECT * FROM planete WHERE nom LIKE %:planeteName% ");
-        $query -> execute(array(
-            "planeteName" => $planeteName
-        ));
+        $query = $dbh->query("SELECT nom FROM planete WHERE nom LIKE '$planeteName%' ORDER BY RAND() LIMIT 0 , 20 ");
+        // $query -> execute(array(
+        //     "planeteName" => $planeteName
+        // ));
         return $query->fetchAll();
     }
 
