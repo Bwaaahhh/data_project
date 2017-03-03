@@ -1,3 +1,4 @@
+<button id='pop'>Afficher popup</button>
 <div id="popup" class="">
 	<?php	include ("controller/get_methods.php"); ?>
 		<?php foreach ($result as $row) :?>
@@ -52,3 +53,7 @@
 		<?php endforeach;?>
 		</div>
 <script src='view/js/popup.js'></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"</script>
+<?php require ('view/js/ajax.js');?>
+<button id="close">Fermer</button>
+</div>

@@ -28,56 +28,56 @@ class Planete{
         return $query->fecthAll();
     }
 
-    public function getHotestPlanete(){
+    public function getHotestPlanete($item=0){
         global $dbh;
-        $query = $dbh->query('SELECT * FROM planete WHERE temp_calculated != "" ORDER BY temp_calculated DESC LIMIT 1');
+        $query = $dbh->query("SELECT * FROM planete WHERE temp_calculated != '' ORDER BY temp_calculated DESC LIMIT '.$item.' , 1");
         return $query->fetchAll();
     }
 
-    public function getColdestPlanete(){
+    public function getColdestPlanete($item=0){
         global $dbh;
-        $query = $dbh->query('SELECT * FROM planete WHERE temp_calculated !="" ORDER BY temp_calculated ASC LIMIT 1');
+        $query = $dbh->query("SELECT * FROM planete WHERE temp_calculated !='' ORDER BY temp_calculated ASC LIMIT '.$item.' , 1");
     }
 
-    public function getHeaviestPlanete(){
+    public function getHeaviestPlanete($item=0){
         global $dbh;
-        $query = $dbh->query('SELECT * FROM planete WHERE mass !="" ORDER BY mass DESC LIMIT 1');
+        $query = $dbh->query("SELECT * FROM planete WHERE mass !='' ORDER BY mass DESC LIMIT '.$item.' , 1");
         return $query->fetchAll();
     }
 
-    public function getLightestPlanete(){
+    public function getLightestPlanete($item=0){
         global $dbh;
-        $query = $dbh->query('SELECT * FROM planete WHERE mass !="" ORDER BY mass ASC LIMIT 1');
+        $query = $dbh->query("SELECT * FROM planete WHERE mass !='' ORDER BY mass ASC LIMIT '.$item.' , 1");
         return $query->fetchAll();
     }
 
-    public function getOldestDiscoveryPlanete(){
+    public function getOldestDiscoveryPlanete($item=0){
         global $dbh;
-        $query = $dbh->query('SELECT * FROM planete WHERE discovered !="" ORDER BY discovered ASC LIMIT 1');
+        $query = $dbh->query("SELECT * FROM planete WHERE discovered !='' ORDER BY discovered ASC LIMIT '.$item.' , 1");
         return $query->fetchAll();
     }
 
-    public function getYoungestDiscoveryPlanete(){
+    public function getYoungestDiscoveryPlanete($item=0){
         global $dbh;
-        $query = $dbh->query('SELECT * FROM planete WHERE discovered !="" ORDER BY discovered DESC LIMIT 1');
+        $query = $dbh->query("SELECT * FROM planete WHERE discovered !='' ORDER BY discovered DESC LIMIT '.$item.' , 1");
         return $query->fetchAll();
     }
 
-    public function getPlaneteByImage(){
+    public function getPlaneteByImage($item=0){
         global $dbh;
-        $query = $dbh->query('SELECT * FROM planete WHERE detection_type = "Imaging" LIMIT 1');
+        $query = $dbh->query("SELECT * FROM planete WHERE detection_type = 'Imaging' LIMIT '.$item.' , 1");
         return $query->fetchAll();
     }
 
-    public function getPlaneteByTransit(){
+    public function getPlaneteByTransit($item=0){
         global $dbh;
-        $query = $dvh->query('SELECT * FROM planete WHERE detection_type = "Primary Transit" LIMIT 1');
+        $query = $dvh->query("SELECT * FROM planete WHERE detection_type = 'Primary Transit' LIMIT '.$item.' , 1");
         return $query->fetchAll();
     }
 
-    public function getPlaneteByRadial(){
+    public function getPlaneteByRadial($item=0){
         global $dbh;
-        $query = $dbh->query('SELECT * FROM planete WHERE detection_type = "Radial Velocity" LIMIT 1');
+        $query = $dbh->query("SELECT * FROM planete WHERE detection_type = 'Radial Velocity' LIMIT '.$item.' , 1");
         return $query->fetchAll();
     }
 
