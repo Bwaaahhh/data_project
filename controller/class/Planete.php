@@ -25,7 +25,7 @@ class Planete{
         $query = execute(array(
             "id_planete" => $idPlanete-1
         ));
-        return $query->fecthAll();
+        return $query->fetchAll();
     }
 
     public function getHotestPlanete($item=0){
