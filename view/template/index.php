@@ -33,7 +33,7 @@
         <header>
           <div class="container">
             <div class="row">
-              <div class="col-md-2">
+              <div class="col-md-1">
                   <!-- <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    width="1920px" height="200px" viewBox="0 0 1920 200" enable-background="new 0 0 1920 200" xml:space="preserve" fill="blue">
   	                <circle id="logo" cx="80" cy="80" r="50" fill="blue"  />
@@ -46,10 +46,10 @@
                   <path d="M 50,0 A 50,50 0 0,0 -50,0Z" transform="matrix(0.866, -0.5, 0.5, 0.866, 80, 80)" />
               </svg> -->
               </div>
-              <div class="col-md-3 offset-md-2 ">
+              <div class="col-md-4 offset-md-2 ">
                 <h1>Titre à définir</h1>
               </div>
-              <div class="col-md-3 offset-md-2">
+              <div class="col-md-3 offset-md-1">
                 <div id="zoneRecherche" class="input-group">
                   <input id="recherche" type="text" class="form-control" placeholder="Search for...">
                   <span class="input-group-btn">

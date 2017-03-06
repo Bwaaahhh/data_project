@@ -26,9 +26,17 @@ $(document).ready(function(){
             data: {search : search},
             success : function(result){
                 let recherchePlanete = jQuery.parseJSON(result);
-                console.log(recherchePlanete);
             }
         });
     });
+
+    $('.parametre').on('click' , function(){
+        if($(this).find('img').css('visibility') ==='hidden'){
+            $(this).find('img').css('visibility','visible');
+        }else{
+            $(this).find('img').css('visibility','hidden');
+        }
+    });
+
 
 });
