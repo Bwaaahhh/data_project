@@ -20,8 +20,7 @@ $(document).ready(function(){
             url: 'controller/recherchePlaneteUnique.php',
             data: {search : search},
             success : function(result){
-                console.log('lala');
-                let recherchePlanete = jQuery.parseJSON(result)
+                let recherchePlanete = jQuery.parseJSON(result);
                 console.log(recherchePlanete);
             }
         });

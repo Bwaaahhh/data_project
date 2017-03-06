@@ -9,9 +9,15 @@ $recherche = $_POST['recherche'];
 $planete = new Planete();
 
 $result = $planete->searchPlanete($recherche);
-foreach($result as $row){
-    echo "<p class='planeteGeneree'>$row->nom</p>" ;
+$count = count($result);
+if($count < 1){
+    echo "Aucun résultat pour cette recherche";
+}else{
+    foreach($result as $row){
+        echo "<p class='planeteGeneree'>$row->nom</p>" ;
+    }
 }
+
 
 
  ?>
