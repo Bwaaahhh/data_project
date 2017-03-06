@@ -4,7 +4,6 @@ require_once('pdo.php');
 require_once('class/Planete.php');
 $recherche = $_POST['recherche'];
 
-// var_dump($recherche);
 
 $planete = new Planete();
 
