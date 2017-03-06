@@ -10,7 +10,7 @@ $planete = new Planete();
 
 $result = $planete->searchPlanete($recherche);
 foreach($result as $row){
-    echo $row->nom ;
+    echo "<p class='planeteGeneree'>$row->nom</p>" ;
 }
 
 

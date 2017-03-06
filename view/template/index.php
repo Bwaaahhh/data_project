@@ -48,11 +48,14 @@
                 <h1>Titre à définir</h1>
               </div>
               <div class="col-md-3 offset-md-2">
-                <div class="input-group">
+                <div id="zoneRecherche" class="input-group">
                   <input id="recherche" type="text" class="form-control" placeholder="Search for...">
                   <span class="input-group-btn">
                     <button class="btn btn-secondary" type="button">Go!</button>
                   </span>
+                  <div class="resultRecherche" id="resultRecherche">
+
+                  </div>
                 </div>
               </div>
             </div>

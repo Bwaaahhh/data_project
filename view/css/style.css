@@ -20,6 +20,21 @@ header h1 {
   text-transform: uppercase;
   font-size: 2em; }
 
+header #zoneRecherche {
+  position: relative; }
+
+header #resultRecherche {
+  position: absolute;
+  top: 40px;
+  color: white; }
+
+header .planeteGeneree {
+  margin: 0; }
+
+header .planeteGeneree:hover {
+  cursor: pointer;
+  color: red; }
+
 body {
   background-image: url("../images/bg2.jpg");
   background-size: cover;
