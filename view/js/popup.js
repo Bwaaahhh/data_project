@@ -5,7 +5,7 @@ $(document).ready(function() {
 	
 		});
 	
-		$('button#close').on('click',function() { 
-		$('div#popup').fadeOut()         
-		});
+		 $('#close').on('click',function() { 
+		 $('div#popup').fadeOut()         
+		 });
 });

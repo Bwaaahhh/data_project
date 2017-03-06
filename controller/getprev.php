@@ -5,6 +5,6 @@ $idplanete = $_POST['idplanete'];
 
 $planete = new Planete();
 
-$result = $planete->getNextPlanete($idplanete);
+$result = $planete->getPrevPlanete($idplanete);
 
 echo json_encode($result);
