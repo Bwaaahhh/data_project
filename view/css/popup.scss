@@ -1,13 +1,17 @@
 #popup {
 	display: none;
-	background-color: #e0fce2;
+	background-color: rgba(168, 194, 237, 0.5);
 	padding: 20px;
 	width:80%;
-	border: 20px solid #44a349;
 	border-radius: 10px;
 	float: left;
 	font-size: 1.2em;
-	position: fixed;
+	position: relative;
 	top: 10%;
+	left: 20%;
 	z-index: 5;
+}
+
+.id {
+visibility : hidden;
 }

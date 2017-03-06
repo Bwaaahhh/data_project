@@ -8,14 +8,14 @@ class Planete{
         return $query->fetchAll();
     }
 
-    public function getNextPlanete(){
+    public function getNextPlanete($idplanete){
         global $dbh;
-        $idPlanete = $_GET['id_planete'];
-        $query = $dbh->prepare('SELECT * FROM planete WHERE id = :idPlanete ');
-        $query -> execute(array(
-            "idPlanete" => $idPlanete+1
-        ));
-        return $query->fetchAll();
+		$newid = $idplanete + 1 ;
+        $query = $dbh->query("SELECT * FROM planete WHERE id = ".$newid);
+        // $query -> execute(array(
+            // "idPlanete" => $idPlanete+1
+        // ));
+        return $query->fetch();
     }
 
     public function getPrevPlanete(){
