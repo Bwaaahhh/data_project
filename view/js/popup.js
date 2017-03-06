@@ -1,12 +1,11 @@
-$(document).ready(function(e) { 	
+$(document).ready(function() { 	
 		
-		$('#pop').on('click',function(e) {
-		e.preventDefault();	
-		$('div#popup').fadeIn()				
+		$('button#pop').on('click',function() {
+		$('div#popup').fadeIn()
 	
 		});
 	
-		$('#close').on('click',function() { 
+		$('button#close').on('click',function() { 
 		$('div#popup').fadeOut()         
 		});
 });

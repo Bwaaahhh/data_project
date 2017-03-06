@@ -1,6 +1,6 @@
 <?php
 
-		if(isset($GET[''])){
+		if(isset($_GET[''])){
 			if($_GET['mass'] === 'heaviest'){
 
 			$result = $planete->getHeaviestPlanete();

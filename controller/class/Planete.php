@@ -8,13 +8,14 @@ class Planete{
         return $query->fetchAll();
     }
 
-    public function getNextPlanete($id){
+    public function getNextPlanete($idplanete){
         global $dbh;
-        $query = $dbh->query("SELECT * FROM planete WHERE id = '.$id + 1 .' ");
+		$newid = $idplanete + 1 ;
+        $query = $dbh->query("SELECT * FROM planete WHERE id = ".$newid);
         // $query -> execute(array(
-        //     "idPlanete" => $idPlanete+1
+            // "idPlanete" => $idPlanete+1
         // ));
-        return $query->fetchAll();
+        return $query->fetch();
     }
 
     public function getPrevPlanete(){
@@ -70,7 +71,7 @@ class Planete{
 
     public function getPlaneteByTransit($item=0){
         global $dbh;
-        $query = $dvh->query("SELECT * FROM planete WHERE detection_type = 'Primary Transit' LIMIT '.$item.' , 1");
+        $query = $dbh->query("SELECT * FROM planete WHERE detection_type = 'Primary Transit' LIMIT '.$item.' , 1");
         return $query->fetchAll();
     }
 

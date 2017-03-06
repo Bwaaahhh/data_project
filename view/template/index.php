@@ -4,7 +4,9 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="view/css/style.css">
         <link rel="stylesheet" href="view/css/fram/bootstrap.min.css">
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src='view/js/popup.js'></script>
+		<script src='view/js/ajax.js'></script>
         <script type="text/javascript" src="view/js/js.js"></script>
         <title>Data_Project</title>
 
