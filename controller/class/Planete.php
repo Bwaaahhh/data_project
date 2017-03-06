@@ -8,13 +8,12 @@ class Planete{
         return $query->fetchAll();
     }
 
-    public function getNextPlanete(){
+    public function getNextPlanete($id){
         global $dbh;
-        $idPlanete = $_GET['id_planete'];
-        $query = $dbh->prepare('SELECT * FROM planete WHERE id = :idPlanete ');
-        $query -> execute(array(
-            "idPlanete" => $idPlanete+1
-        ));
+        $query = $dbh->query("SELECT * FROM planete WHERE id = '.$id + 1 .' ");
+        // $query -> execute(array(
+        //     "idPlanete" => $idPlanete+1
+        // ));
         return $query->fetchAll();
     }
 
@@ -25,7 +24,7 @@ class Planete{
         $query = execute(array(
             "id_planete" => $idPlanete-1
         ));
-        return $query->fecthAll();
+        return $query->fetchAll();
     }
 
     public function getHotestPlanete($item=0){
@@ -92,19 +91,19 @@ class Planete{
 
     public function GetSpecialPlanete($planeteName){
         global $dbh;
-        $query = $dbh->prepare("SELECT * FROM planete WHERE nom = :planeteName ");
-        $query -> execute(array(
-            "planeteName" => $planeteName
-        ));
-        return $query->fetchAll();
+        $query = $dbh->query("SELECT * FROM planete WHERE nom = '$planeteName'");
+        // $query -> execute(array(
+        //     "planeteName" => $planeteName
+        // ));
+        return $query->fetch();
     }
 
     public function searchPlanete($planeteName){
         global $dbh;
-        $query = $dbh->prepare("SELECT * FROM planete WHERE nom LIKE %:planeteName% ");
-        $query -> execute(array(
-            "planeteName" => $planeteName
-        ));
+        $query = $dbh->query("SELECT nom FROM planete WHERE nom LIKE '$planeteName%' ORDER BY RAND() LIMIT 0 , 20 ");
+        // $query -> execute(array(
+        //     "planeteName" => $planeteName
+        // ));
         return $query->fetchAll();
     }
 
