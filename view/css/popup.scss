@@ -1,17 +1,61 @@
+body {
+overflow-x : hidden;
+}
+
 #popup {
 	display: none;
-	background-color: rgba(168, 194, 237, 0.5);
+	background-color: rgba(72, 73, 72, 0.8);
 	padding: 20px;
-	width:80%;
+	width:70%;
 	border-radius: 10px;
 	float: left;
 	font-size: 1.2em;
 	position: relative;
 	top: 10%;
-	left: 20%;
+	left: 15%;
 	z-index: 5;
 }
 
-.id {
-visibility : hidden;
+#id {
+display: none;
+}
+
+#picture {
+background-color: rgba(2, 22, 2, 1);
+width: 200px;
+height: 250px;
+border-radius : 5px;
+border : dotted 2px #15c115;
+}
+
+#close {
+width: 30px;
+float : right;
+}
+
+#popup p {
+font-family: 'Orbitron';
+font-size: 16px;
+font-weight: bold;
+color: #9c9e9c;
+}
+
+#popup p span {
+color: #15c115;
+}
+
+#popup .titre {
+font-family: 'Orbitron';
+font-size: 24px;
+font-weight: bold;
+}
+
+#popup .data1{
+padding-left: 45px;
+background-color: rgba(2, 22, 2, 1);
+border : dotted 2px #15c115;
+}
+
+#popup .data2{
+margin-top: 10px;
 }

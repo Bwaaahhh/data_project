@@ -18,14 +18,14 @@ class Planete{
         return $query->fetch();
     }
 
-    public function getPrevPlanete(){
+    public function getPrevPlanete($idplanete){
         global $dbh;
-        $idPlanete = $_GET['id_planete'];
-        $query = $dbh->prepare('SELECT * FROM planete WHERE id = :id_planete');
-        $query = execute(array(
-            "id_planete" => $idPlanete-1
-        ));
-        return $query->fetchAll();
+        $idprev = $idplanete - 1;
+        $query = $dbh->query("SELECT * FROM planete WHERE id = ".$idprev);
+        // $query = execute(array(
+            // "id_planete" => $idPlanete-1
+        // ));
+        return $query->fetch();
     }
 
     public function getHotestPlanete($item=0){
