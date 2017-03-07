@@ -4,6 +4,13 @@ $(document).ready(function() {
         $('#next').on('click',function(e) {
 				e.preventDefault();
 				var idplanete = $('#idplanet').html();
+				var origin = $('#popup').css({left: '15%'});
+				$('#popup').animate({left: '-5000px'});
+				$('#popup').css({display: 'none'});
+				$('#popup').css({left: '10000px'});
+				$('#popup').css({display: "block"});
+				$('#popup').animate({left: '15%'});
+				
 				console.log(idplanete);
                 $.ajax({
                     type : "post",
@@ -34,6 +41,12 @@ $(document).ready(function() {
 		$('#prev').on('click',function(e) {
 				e.preventDefault();
 				var idplanete = $('#idplanet').html();
+				$('#popup').animate({left: '5000px'});
+				$('#popup').css({display: 'none'});
+				$('#popup').css({left: '-10000px'});
+				$('#popup').css({display: "block"});
+				$('#popup').animate({left: '15%'});
+				
 				console.log(idplanete);
                 $.ajax({
                     type : "post",
