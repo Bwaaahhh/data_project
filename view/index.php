@@ -1,39 +1,45 @@
 <div class="container">
 	<div class="presentation">
-		<div class="row">
+		<div class="row justify-content-center">
 			<p>Bienvenue Voyageur, tu pourras à travers ce site découvrir ou redécouvrir les exo-planètes
 			recencées.</p>
 		</div>
-		<div class="row">
+		<div class="row justify-content-center">
 			<p>Si tu veux te laisser guider dans l'immensitée de l'espace c'est par ici</p>
 		</div>
-		<div class="row">
+		<div class="row justify-content-center">
 				<p>Tu peux aussi affiner tes recherches en nous disant les planètes que tu préfères voir. </p>
 		</div>
 		<div class="selectionParametre">
 			<div class="row">
-				<div class="parametre col-md-3">
-					<p>Par masse</p>
-						<img src="view/images/kilo.png" alt="">
-						<img src="view/images/plume.png" alt="">
-				</div>
-				<div class="parametre col-md-3">
-					<p>Par Température</p>
-						<img src="view/images/chaleur.png" alt="">
-						<img src="view/images/flocon.png" alt="">
-				</div>
-				<div class="parametre col-md-3">
-					<p>Par année de découverte</p>
-						<img src="view/images/dino.png" alt="">
-						<img src="view/images/alien.png" alt="">
-				</div>
-				<div class="parametre col-md-3">
-					<p>Par méthode de découverte</p>
+
+					<div class="parametre col-md-3">
+						<p class="facteur" id="facteurMasse">Par masse</p>
+						<img class="plus" id="imagePoid" src="view/images/kilo.png" alt="">
+						<img class="moins" id="imagePlume" src="view/images/plume.png" alt="">
+						<!-- <input type="hidden" name="mass" value="" id="mass"> -->
+					</div>
+					<div class="parametre col-md-3">
+						<p class="facteur" id="facteurTemp">Par Température</p>
+						<img class="plus" id="imageChaud" src="view/images/chaleur.png" alt="">
+						<img class="moins" id="imageFroid" src="view/images/flocon.png" alt="">
+						<!-- <input type="hidden" name="temp" value="" id="temp"> -->
+					</div>
+					<div class="parametre col-md-3">
+						<p class="facteur" id="facteurAnnee">Par année de découverte</p>
+						<img class="plus" id="imageVieux" src="view/images/dino.png" alt="">
+						<img class="moins" id="imageJeune" src="view/images/alien.png" alt="">
+						<!-- <input type="hidden" name="annee" value="" id="annee"> -->
+					</div>
+					<div class="parametre col-md-3">
+						<p class="facteur">Par méthode de découverte</p>
 						<img src="" alt="">
 						<img src="" alt="">
-				</div>
+						<input type="hidden" name="methode" value="" id="methode">
+					</div>
+
 			</div>
-		</div>	
+		</div>
 	</div>
 
 

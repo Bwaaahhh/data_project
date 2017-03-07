@@ -30,12 +30,36 @@ $(document).ready(function(){
         });
     });
 
-    $('.parametre').on('click' , function(){
-        if($(this).find('img').css('visibility') ==='hidden'){
-            $(this).find('img').css('visibility','visible');
+    $('#facteurMasse').on('click', function(){
+        if($('#imagePoid').css('visibility') === 'hidden'){
+            $('#imagePoid').css('visibility','visible');
+            $('#imagePlume').css('visibility','visible');
         }else{
-            $(this).find('img').css('visibility','hidden');
+            $('#imagePoid').css('visibility','hidden');
+            $('#imagePlume').css('visibility','hidden');
         }
+    });
+    $('#facteurTemp').on('click', function(){
+        if($('#imageChaud').css('visibility') === 'hidden'){
+            $('#imageChaud').css('visibility','visible');
+            $('#imageFroid').css('visibility','visible');
+        }else{
+            $('#imageChaud').css('visibility','hidden');
+            $('#imageFroid').css('visibility','hidden');
+        }
+    });
+    $('#facteurAnnee').on('click', function(){
+        if($('#imageVieux').css('visibility') === 'hidden'){
+            $('#imageVieux').css('visibility','visible');
+            $('#imageJeune').css('visibility','visible');
+        }else{
+            $('#imageVieux').css('visibility','hidden');
+            $('#imageJeune').css('visibility','hidden');
+        }
+    });
+
+    $('.parametre').on('click' , 'img' ,function(e){
+        console.log('pouet');
     });
 
 
