@@ -12,32 +12,43 @@
 		</div>
 		<div class="selectionParametre">
 			<div class="row">
-
-					<div class="parametre col-md-3">
-						<p class="facteur" id="facteurMasse">Par masse</p>
-						<img class="plus" id="imagePoid" src="view/images/kilo.png" alt="">
-						<img class="moins" id="imagePlume" src="view/images/plume.png" alt="">
-						<!-- <input type="hidden" name="mass" value="" id="mass"> -->
-					</div>
-					<div class="parametre col-md-3">
-						<p class="facteur" id="facteurTemp">Par Température</p>
-						<img class="plus" id="imageChaud" src="view/images/chaleur.png" alt="">
-						<img class="moins" id="imageFroid" src="view/images/flocon.png" alt="">
-						<!-- <input type="hidden" name="temp" value="" id="temp"> -->
-					</div>
-					<div class="parametre col-md-3">
-						<p class="facteur" id="facteurAnnee">Par année de découverte</p>
-						<img class="plus" id="imageVieux" src="view/images/dino.png" alt="">
-						<img class="moins" id="imageJeune" src="view/images/alien.png" alt="">
-						<!-- <input type="hidden" name="annee" value="" id="annee"> -->
-					</div>
-					<div class="parametre col-md-3">
-						<p class="facteur">Par méthode de découverte</p>
-						<img src="" alt="">
-						<img src="" alt="">
-						<input type="hidden" name="methode" value="" id="methode">
-					</div>
-
+				<div class="parametre col-md-2">
+					<p class="facteur" id="facteurMasse">Par masse</p>
+					<img class="plus" select="poidDesc" id="imagePoid" src="view/images/kilo.png" alt="">
+					<img class="moins" select="poidAsc" id="imagePlume" src="view/images/plume.png" alt="">
+				</div>
+				<div class="parametre col-md-1">
+					<p>ou</p>
+				</div>
+				<div class="parametre col-md-2">
+					<p class="facteur" id="facteurTemp">Par Température</p>
+					<img class="plus" select="tempDesc" id="imageChaud" src="view/images/chaleur.png" alt="">
+					<img class="moins" select="tempAsc" id="imageFroid" src="view/images/flocon.png" alt="">
+				</div>
+				<div class="parametre col-md-1">
+					<p>ou</p>
+				</div>
+				<div class="parametre col-md-2">
+					<p class="facteur" id="facteurAnnee">Par année de découverte</p>
+					<img class="plus" select="anneeDesc" id="imageVieux" src="view/images/dino.png" alt="">
+					<img class="moins" select="anneeAsc" id="imageJeune" src="view/images/alien.png" alt	="">
+				</div>
+				<div class="parametre col-md-1">
+					<p>et / ou</p>
+				</div>
+				<div class="parametre col-md-2">
+					<p class="facteur">Par méthode de découverte</p>
+					<p>Primary Transit</p>
+					<p>Radial Velocity</p>
+					<p>Imaging</p>
+				</div>
+			</div>
+			<div class="row">
+				<form class="" action="" method="post">
+					<input type="text" name="select" value="" id="select">
+					<input type="text" name="methode" value="" id="methode">
+					<button type="submit" name="selection">Envoyer</button>
+				</form>
 			</div>
 		</div>
 	</div>

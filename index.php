@@ -1,6 +1,7 @@
 <?php
 require_once 'controller/pdo.php';
 require_once 'controller/class/Planete.php';
+require_once 'controller/recupSelect.php';
 
 $planete = new Planete();
 

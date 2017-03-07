@@ -30,6 +30,39 @@ $(document).ready(function(){
         });
     });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
     $('#facteurMasse').on('click', function(){
         if($('#imagePoid').css('visibility') === 'hidden'){
             $('#imagePoid').css('visibility','visible');
@@ -58,8 +91,10 @@ $(document).ready(function(){
         }
     });
 
-    $('.parametre').on('click' , 'img' ,function(e){
-        console.log('pouet');
+    $('.parametre img').on('click' , function(e){
+        let select = $(this).attr("select") ;
+        console.log(id);
+        $('#select').val(select);
     });
 
 

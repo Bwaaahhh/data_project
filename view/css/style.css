@@ -73,4 +73,7 @@ body {
 .presentation .parametre img:last-child {
   top: -100px; }
 
+.selectionParametre .parametre:last-child {
+  margin-bottom: 10%; }
+
 /*# sourceMappingURL=style.css.map */
