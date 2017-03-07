@@ -9,5 +9,16 @@ $planete = new Planete();
 
 $result = $planete->GetSpecialPlanete($recherche);
 
-echo json_encode($result);
+
+$name = $result->star_name;
+
+$res = $planete->getSameStarPlanete($name);
+
+$array = array(
+    "planete" => $result,
+    "systeme" => $res,
+);
+
+echo json_encode($array);
+
  ?>

@@ -1,0 +1,27 @@
+.presentation{
+    margin-top: 5%;
+    color: white;
+    margin-bottom: 10%;
+}
+.presentation .parametre{
+    margin-top: 10%;
+    position: relative;
+    cursor: pointer;
+}
+.presentation img{
+    visibility: hidden;
+    position: absolute;
+}
+.presentation .parametre img:first-child{
+    top : 100px;
+}
+.presentation .parametre img:last-child{
+    top : -100px;
+}
+.selectionParametre .parametre:last-child{
+    margin-bottom: 10%;
+}
+// .parametre input{
+//     position: absolute;
+//     left: -2000px;
+// }

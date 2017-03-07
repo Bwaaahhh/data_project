@@ -90,6 +90,11 @@ class Planete{
         return $query->fetchAll();
     }
 
+    // public function getSpecialPlanetebySelect($methode,$select){
+    //     global $dbh;
+    //     $query = $dbh->query("SELECT * FROM planete .$methode. .$select.");
+    // }
+
     public function GetSpecialPlanete($planeteName){
         global $dbh;
         $query = $dbh->query("SELECT * FROM planete WHERE nom = '$planeteName'");

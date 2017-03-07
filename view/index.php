@@ -1,3 +1,57 @@
+<div class="container">
+	<div class="presentation">
+		<div class="row justify-content-center">
+			<p>Bienvenue Voyageur, tu pourras à travers ce site découvrir ou redécouvrir les exo-planètes
+			recencées.</p>
+		</div>
+		<div class="row justify-content-center">
+			<p>Si tu veux te laisser guider dans l'immensitée de l'espace c'est par ici</p>
+		</div>
+		<div class="row justify-content-center">
+				<p>Tu peux aussi affiner tes recherches en nous disant les planètes que tu préfères voir. </p>
+		</div>
+		<div class="selectionParametre">
+			<div class="row">
+				<div class="parametre col-md-2">
+					<p class="facteur" id="facteurMasse">Par masse</p>
+					<img class="plus" select="poidDesc" id="imagePoid" src="view/images/kilo.png" alt="">
+					<img class="moins" select="poidAsc" id="imagePlume" src="view/images/plume.png" alt="">
+				</div>
+				<div class="parametre col-md-1">
+					<p>ou</p>
+				</div>
+				<div class="parametre col-md-2">
+					<p class="facteur" id="facteurTemp">Par Température</p>
+					<img class="plus" select="tempDesc" id="imageChaud" src="view/images/chaleur.png" alt="">
+					<img class="moins" select="tempAsc" id="imageFroid" src="view/images/flocon.png" alt="">
+				</div>
+				<div class="parametre col-md-1">
+					<p>ou</p>
+				</div>
+				<div class="parametre col-md-2">
+					<p class="facteur" id="facteurAnnee">Par année de découverte</p>
+					<img class="plus" select="anneeDesc" id="imageVieux" src="view/images/dino.png" alt="">
+					<img class="moins" select="anneeAsc" id="imageJeune" src="view/images/alien.png" alt	="">
+				</div>
+				<div class="parametre col-md-1">
+					<p>et / ou</p>
+				</div>
+				<div class="parametre col-md-2">
+					<p class="facteur">Par méthode de découverte</p>
+					<p>Primary Transit</p>
+					<p>Radial Velocity</p>
+					<p>Imaging</p>
+				</div>
+			</div>
+			<div class="row">
+				<form class="" action="" method="post">
+					<input type="text" name="select" value="" id="select">
+					<input type="text" name="methode" value="" id="methode">
+					<button type="submit" name="selection">Envoyer</button>
+				</form>
+			</div>
+		</div>
+	</div>
 <button id='pop'>Afficher popup</button>
 <div id="popup" class="">
 	<?php	include ("controller/get_methods.php"); ?>
