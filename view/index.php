@@ -18,7 +18,7 @@
 					<p>Planète(s) soeur(s)</p>
 					<?php foreach ($sister as $sis) :?>
 
-						<p><?= $sis->nom ?></p>
+						<p><span id='samestarplanets'<?= $sis->nom ?></p>
 					<?php endforeach; ?>
 					</div>
 			</div>

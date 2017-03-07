@@ -21,6 +21,10 @@ $(document).ready(function() {
 					console.log(res);
 					$('#idplanet').html(res.id);
 					$('#nom').html(res.nom);
+					$('#annee').html(res.discovered);
+					$('#methode').html(res.detection_type);
+					$('#systeme').html(res.star_name);
+					$('#samestarplanets').html(res.nom);
 					$('#masse').html(res.mass);
 					$('#rayon').html(res.radius);
 					$('#periode').html(res.orbital_period);
@@ -57,6 +61,10 @@ $(document).ready(function() {
 					console.log(res);
 					$('#idplanet').html(res.id);
 					$('#nom').html(res.nom);
+					$('#annee').html(res.discovered);
+					$('#methode').html(res.detection_type);
+					$('#systeme').html(res.star_name);
+					$('#samestarplanets').html(res.nom);
 					$('#masse').html(res.mass);
 					$('#rayon').html(res.radius);
 					$('#periode').html(res.orbital_period);
