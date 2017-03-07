@@ -7,7 +7,7 @@ if(isset($_POST['selection'])){
         }else if($_POST['select'] == "poidDesc"){
             $select = " ORDER BY mass DESC ";
         }else if($_POST['select'] == "tempAsc"){
-            if($_POST['methode']!= ""){
+            if($_POST['methode'] != ""){
                 $select = " AND temp_calculated != '0' OR temp_measured != '0' ORDER BY temp_calculated ASC ";
             }else{
                 $select = " WHERE temp_calculated != '0' OR temp_measured != '0' ORDER BY temp_calculated ASC ";
@@ -27,18 +27,14 @@ if(isset($_POST['selection'])){
         }
     }
 
-    if($_POST['methode']!= ""){
+    if($_POST['methode'] != ""){
         if($_POST['methode'] == "Primary" ){
-            $select = " WHERE detection_type ='Primary Transit' ";
+            $methode = " WHERE detection_type = 'Primary Transit' ";
         }else if($_POST['methode'] == "Radial"){
-            $select = " WHERE detection_type ='Radial Velocity' ";
+            $methode = " WHERE detection_type = 'Radial Velocity' ";
         }else if($_POST['methode'] == "Imaging"){
-            $select = " WHERE detection_type ='Imaging' ";
+            $methode = " WHERE detection_type = 'Imaging' ";
+        }
     }
 }
  ?>
-
-
-
-
-SELECT * FROM `planete` WHERE temp_calculated != "0" OR temp_measured != "0" ORDER BY mass DESC , discovered ASC , temp_calculated DESC ;

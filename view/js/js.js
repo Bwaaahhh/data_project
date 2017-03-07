@@ -25,7 +25,8 @@ $(document).ready(function(){
             url: 'controller/recherchePlaneteUnique.php',
             data: {search : search},
             success : function(result){
-                let recherchePlanete = jQuery.parseJSON(result);
+                console.log(result);
+               let recherchePlanete = jQuery.parseJSON(result);
             }
         });
     });
@@ -61,7 +62,7 @@ $(document).ready(function(){
 
 
 
-    
+
 
     $('#facteurMasse').on('click', function(){
         if($('#imagePoid').css('visibility') === 'hidden'){
@@ -93,7 +94,6 @@ $(document).ready(function(){
 
     $('.parametre img').on('click' , function(e){
         let select = $(this).attr("select") ;
-        console.log(id);
         $('#select').val(select);
     });
 
