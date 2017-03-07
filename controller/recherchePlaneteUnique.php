@@ -14,6 +14,11 @@ $name = $result->star_name;
 
 $res = $planete->getSameStarPlanete($name);
 
-echo json_encode($res);
-echo json_encode($result);
+$array = array(
+    "planete" => $result,
+    "systeme" => $res,
+);
+
+echo json_encode($array);
+
  ?>
