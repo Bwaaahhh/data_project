@@ -105,9 +105,21 @@ $(document).ready(function(){
         }
     });
 
+    $('#methodeRecherche').on('click', function(){
+        if($('.pMethodeRecherche').css('visibility') === 'hidden'){
+            $('.pMethodeRecherche').css('visibility' ,'visible');
+        }else{
+            $('.pMethodeRecherche').css('visibility', 'hidden');
+        }
+    });
+
     $('.parametre img').on('click' , function(e){
         let select = $(this).attr("select") ;
         $('#select').val(select);
+    });
+    $('.parametre p').on('click' , function(){
+        let methode = $(this).attr("methode");
+        $('#methode').val(methode);
     });
 
 

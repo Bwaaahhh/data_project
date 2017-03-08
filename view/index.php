@@ -37,10 +37,10 @@
 					<p>et / ou</p>
 				</div>
 				<div class="parametre col-md-2">
-					<p class="facteur">Par méthode de découverte</p>
-					<p>Primary Transit</p>
-					<p>Radial Velocity</p>
-					<p>Imaging</p>
+					<p class="facteur" id="methodeRecherche">Par méthode de découverte</p>
+					<p methode="Primary Transit" class="pMethodeRecherche">Primary Transit</p>
+					<p methode="Radial Velocity" class="pMethodeRecherche">Radial Velocity</p>
+					<p methode="Imaging" class="pMethodeRecherche">Imaging</p>
 				</div>
 			</div>
 			<div class="row">
