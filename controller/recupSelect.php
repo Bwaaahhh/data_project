@@ -1,6 +1,12 @@
 <?php
+require_once('pdo.php');
+require_once('class/Planete.php');
+$planete = new Planete();
 
-if(isset($_POST['selection'])){
+if(isset($_POST['select'])){
+    $methode = "";
+    $select = "";
+    $count = $_POST['count'];
     if($_POST['select'] != ""){
         if($_POST['select'] == "poidAsc" ){
             $select = " ORDER BY mass ASC ";
@@ -22,8 +28,6 @@ if(isset($_POST['selection'])){
             $select = " ORDER BY discovered ASC ";
         }else if($_POST['select'] == "anneeDesc"){
             $select = " ORDER BY discovered ASC ";
-        }else{
-            $select = "";
         }
     }
 
@@ -36,5 +40,10 @@ if(isset($_POST['selection'])){
             $methode = " WHERE detection_type = 'Imaging' ";
         }
     }
+
+    $result = $planete->getSpecialPlanetebySelect($methode,$select,$count);
+    echo json_encode($result);
 }
+
+
  ?>

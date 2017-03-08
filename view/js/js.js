@@ -84,6 +84,28 @@ $(document).ready(function(){
 
 
 
+
+
+    var count = 0 ;
+
+
+
+    $('#formSelect').submit(function(e){
+        $('#count').val(count);
+        e.preventDefault();
+        var donnee = $(this).serialize();
+        console.log(donnee);
+        $.ajax({
+            method : 'post',
+            url : 'controller/recupSelect.php',
+            data : donnee,
+            success : function(result){
+                let rechercheSelect = jQuery.parseJSON(result);
+                console.log(rechercheSelect);
+            }
+        });
+    });
+
     $('#facteurMasse').on('click', function(){
         if($('#imagePoid').css('visibility') === 'hidden'){
             $('#imagePoid').css('visibility','visible');
@@ -112,9 +134,22 @@ $(document).ready(function(){
         }
     });
 
+    $('#methodeRecherche').on('click', function(){
+        if($('.pMethodeRecherche').css('visibility') === 'hidden'){
+            $('.pMethodeRecherche').css('visibility' ,'visible');
+        }else{
+            $('.pMethodeRecherche').css('visibility', 'hidden');
+        }
+    });
+
     $('.parametre img').on('click' , function(e){
         let select = $(this).attr("select") ;
         $('#select').val(select);
+    });
+    $('.parametre p').on('click' , function(){
+        let methode = $(this).attr("methode");
+        $('#methode').val(methode);
+        count += 1 ;
     });
 
 
