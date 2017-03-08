@@ -17,4 +17,5 @@ $result = $planete->GetSpecialPlanete($recherche);
 
 // $tableau = array( "planete" => $result, "system" => $res);
 echo json_encode($result);
+
  ?>

@@ -7,4 +7,10 @@ $planete = new Planete();
 
 $result = $planete->getPrevPlanete($idplanete);
 
-echo json_encode($result);
+
+$name = $result->star_name;
+
+$res = $planete->getSameStarPlanete($name);
+
+$tableau = array( "planete" => $result, "system" => $res);
+echo json_encode($tableau);
