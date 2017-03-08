@@ -37,17 +37,18 @@
 					<p>et / ou</p>
 				</div>
 				<div class="parametre col-md-2">
-					<p class="facteur">Par méthode de découverte</p>
-					<p>Primary Transit</p>
-					<p>Radial Velocity</p>
-					<p>Imaging</p>
+					<p class="facteur" id="methodeRecherche">Par méthode de découverte</p>
+					<p methode="Primary" class="pMethodeRecherche">Primary Transit</p>
+					<p methode="Radial" class="pMethodeRecherche">Radial Velocity</p>
+					<p methode="Imaging" class="pMethodeRecherche">Imaging</p>
 				</div>
 			</div>
 			<div class="row">
-				<form class="" action="" method="post">
-					<input type="text" name="select" value="" id="select">
-					<input type="text" name="methode" value="" id="methode">
-					<button type="submit" name="selection">Envoyer</button>
+				<form class="" action="" method="post" id="formSelect">
+					<input type="text" name="select" value="" id="select"/>
+					<input type="text" name="methode" value="" id="methode"/>
+					<input type="text" name="count" value="" id="count" />
+					<button type="submit" name="selection" id="selection">Envoyer</button>
 				</form>
 			</div>
 		</div>
@@ -72,7 +73,7 @@
 					<p>Planète(s) soeur(s)</p>
 					<?php foreach ($sister as $sis) :?>
 
-						<p><?= $sis->nom ?></p>
+						<p><span id='samestarplanets'<?= $sis->nom ?></p>
 					<?php endforeach; ?>
 					</div>
 			</div>
@@ -110,7 +111,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<button id='next' id_next="<?=$row->id+1?>">Planète Suivante</button>
 		<button id='prev' id_prev="<?=$row->id-1?>">Planète Précédente</button>
 		</div>

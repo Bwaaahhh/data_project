@@ -83,17 +83,18 @@ class Planete{
 
     public function getSameStarPlanete($starName){
         global $dbh;
-        $query = $dbh->prepare('SELECT nom FROM planete WHERE star_name = :starName');
-        $query -> execute(array(
-            "starName" => $starName
-        ));
-        return $query->fetchAll();
+        $query = $dbh->query("SELECT nom FROM planete WHERE star_name = '$starName'");
+        // $query -> execute(array(
+            // "starName" => $starName
+        // ));
+        return $query->fetch();
     }
 
-    // public function getSpecialPlanetebySelect($methode,$select){
-    //     global $dbh;
-    //     $query = $dbh->query("SELECT * FROM planete .$methode. .$select.");
-    // }
+    public function getSpecialPlanetebySelect($methode,$select,$count){
+        global $dbh;
+        $query = $dbh->query("SELECT * FROM planete $methode$select LIMIT $count , 1 ");
+        return $query->fetchAll();
+    }
 
     public function GetSpecialPlanete($planeteName){
         global $dbh;
