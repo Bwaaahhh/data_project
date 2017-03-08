@@ -38,15 +38,16 @@
 				</div>
 				<div class="parametre col-md-2">
 					<p class="facteur" id="methodeRecherche">Par méthode de découverte</p>
-					<p methode="Primary Transit" class="pMethodeRecherche">Primary Transit</p>
-					<p methode="Radial Velocity" class="pMethodeRecherche">Radial Velocity</p>
+					<p methode="Primary" class="pMethodeRecherche">Primary Transit</p>
+					<p methode="Radial" class="pMethodeRecherche">Radial Velocity</p>
 					<p methode="Imaging" class="pMethodeRecherche">Imaging</p>
 				</div>
 			</div>
 			<div class="row">
 				<form class="" action="" method="post" id="formSelect">
-					<input type="text" name="select" value="" id="select">
-					<input type="text" name="methode" value="" id="methode">
+					<input type="text" name="select" value="" id="select"/>
+					<input type="text" name="methode" value="" id="methode"/>
+					<input type="text" name="count" value="" id="count" />
 					<button type="submit" name="selection" id="selection">Envoyer</button>
 				</form>
 			</div>

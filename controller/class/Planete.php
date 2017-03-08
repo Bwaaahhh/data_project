@@ -90,9 +90,9 @@ class Planete{
         return $query->fetchAll();
     }
 
-    public function getSpecialPlanetebySelect($methode,$select){
+    public function getSpecialPlanetebySelect($methode,$select,$count){
         global $dbh;
-        $query = $dbh->query("SELECT * FROM planete $methode$select");
+        $query = $dbh->query("SELECT * FROM planete $methode$select LIMIT $count , 1 ");
         return $query->fetchAll();
     }
 

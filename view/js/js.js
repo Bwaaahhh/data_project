@@ -61,8 +61,12 @@ $(document).ready(function(){
 
 
 
+    var count = 0 ;
+
+
 
     $('#formSelect').submit(function(e){
+        $('#count').val(count);
         e.preventDefault();
         var donnee = $(this).serialize();
         console.log(donnee);
@@ -120,6 +124,7 @@ $(document).ready(function(){
     $('.parametre p').on('click' , function(){
         let methode = $(this).attr("methode");
         $('#methode').val(methode);
+        count += 1 ;
     });
 
 

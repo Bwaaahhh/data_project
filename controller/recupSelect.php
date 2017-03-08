@@ -6,6 +6,7 @@ $planete = new Planete();
 if(isset($_POST['select'])){
     $methode = "";
     $select = "";
+    $count = $_POST['count'];
     if($_POST['select'] != ""){
         if($_POST['select'] == "poidAsc" ){
             $select = " ORDER BY mass ASC ";
@@ -40,7 +41,7 @@ if(isset($_POST['select'])){
         }
     }
 
-    $result = $planete->getSpecialPlanetebySelect($methode,$select);
+    $result = $planete->getSpecialPlanetebySelect($methode,$select,$count);
     echo json_encode($result);
 }
 
