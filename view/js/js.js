@@ -20,13 +20,33 @@ $(document).ready(function(){
         const search = $(this).html();
         $('.planeteGeneree').html("");
         $('#recherche').val("");
+		$('#popup').fadeIn();
         $.ajax({
             method: "post",
             url: 'controller/recherchePlaneteUnique.php',
             data: {search : search},
             success : function(result){
-                console.log(result);
-               let recherchePlanete = jQuery.parseJSON(result);
+                let res = jQuery.parseJSON(result);
+                console.log(res);
+					$('#idplanet').html(res.id);
+					$('#nom').html(res.nom);
+					$('#annee').html(res.discovered);
+					$('#methode').html(res.detection_type);
+					$('#systeme').html(res.star_name);
+					$('#samestarplanets').html(res.nom);
+					$('#masse').html(res.mass);
+					$('#rayon').html(res.radius);
+					$('#periode').html(res.orbital_period);
+					$('#tcalc').html(res.temp_calculated);
+					$('#tmes').html(res.temp_measured);
+					$('#molecules').html(res.molecules);
+					$('#starnom').html(res.star_name);
+					$('#distance').html(res.star_distance);
+					$('#starage').html(res.star_age);
+					$('#starmasse').html(res.star_mass);
+					$('#starrayon').html(res.star_radius);
+					$('#startemp').html(res.star_teff);
+					$('#type').html(res.star_sp_type);
             }
         });
     });

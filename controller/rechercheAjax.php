@@ -13,7 +13,7 @@ if($count < 1){
     echo "Aucun résultat pour cette recherche";
 }else{
     foreach($result as $row){
-        echo "<p class='planeteGeneree'>$row->nom</p>" ;
+        echo "<p id='pop' class='planeteGeneree'>$row->nom</p>" ;
     }
 }
 
