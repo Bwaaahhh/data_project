@@ -62,7 +62,20 @@ $(document).ready(function(){
 
 
 
-
+    $('#formSelect').submit(function(e){
+        e.preventDefault();
+        var donnee = $(this).serialize();
+        console.log(donnee);
+        $.ajax({
+            method : 'post',
+            url : 'controller/recupSelect.php',
+            data : donnee,
+            success : function(result){
+                let rechercheSelect = jQuery.parseJSON(result);
+                console.log(rechercheSelect);
+            }
+        });
+    });
 
     $('#facteurMasse').on('click', function(){
         if($('#imagePoid').css('visibility') === 'hidden'){

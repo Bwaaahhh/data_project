@@ -44,10 +44,10 @@
 				</div>
 			</div>
 			<div class="row">
-				<form class="" action="" method="post">
+				<form class="" action="" method="post" id="formSelect">
 					<input type="text" name="select" value="" id="select">
 					<input type="text" name="methode" value="" id="methode">
-					<button type="submit" name="selection">Envoyer</button>
+					<button type="submit" name="selection" id="selection">Envoyer</button>
 				</form>
 			</div>
 		</div>
@@ -110,7 +110,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<button id='next' id_next="<?=$row->id+1?>">Planète Suivante</button>
 		<button id='prev' id_prev="<?=$row->id-1?>">Planète Précédente</button>
 		</div>
