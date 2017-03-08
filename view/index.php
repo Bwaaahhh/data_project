@@ -5,7 +5,7 @@
 			recencées.</p>
 		</div>
 		<div class="row justify-content-center">
-			<p>Si tu veux te laisser guider dans l'immensitée de l'espace c'est par ici</p>
+			<p>Si tu veux te laisser guider dans l'immensitée de l'espace c'est par ici  <button id='pop'>Afficher popup</button></p>
 		</div>
 		<div class="row justify-content-center">
 				<p>Tu peux aussi affiner tes recherches en nous disant les planètes que tu préfères voir. </p>
@@ -53,7 +53,6 @@
 			</div>
 		</div>
 	</div>
-<button id='pop'>Afficher popup</button>
 <div id="popup" class="">
 	<?php	include ("controller/get_methods.php"); ?>
 	<img id="close" src='view/images/close.png'>

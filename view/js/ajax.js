@@ -10,13 +10,13 @@ $(document).ready(function() {
 				$('#popup').css({left: '10000px'});
 				$('#popup').css({display: "block"});
 				$('#popup').animate({left: '15%'});
-				
+
 				console.log(idplanete);
                 $.ajax({
                     type : "post",
                     url: "controller/getnext.php",
                     data: {idplanete : idplanete},
-                    success : function(result) {		 
+                    success : function(result) {
 					var res = jQuery.parseJSON(result);
 					console.log(res);
 					$('#idplanet').html(res.id);
@@ -50,13 +50,13 @@ $(document).ready(function() {
 				$('#popup').css({left: '-10000px'});
 				$('#popup').css({display: "block"});
 				$('#popup').animate({left: '15%'});
-				
+
 				console.log(idplanete);
                 $.ajax({
                     type : "post",
                     url: "controller/getprev.php",
                     data: {idplanete : idplanete},
-                    success : function(result) {		 
+                    success : function(result) {
 					var res = jQuery.parseJSON(result);
 					console.log(res);
 					$('#idplanet').html(res.planete['id']);
@@ -68,7 +68,7 @@ $(document).ready(function() {
 					// for (var i = 0 in res.system['nom']) {
 						// console.log('coucou');
 						$('#samestarplanets').html(res.system['nom']);
-					
+
 					$('#masse').html(res.planete.mass);
 					$('#rayon').html(res.planete.radius);
 					$('#periode').html(res.planete.orbital_period);
@@ -85,6 +85,6 @@ $(document).ready(function() {
 					console.log(res.system['nom']);
                     },
                 });
-            });	
-		
+            });
+
 });
