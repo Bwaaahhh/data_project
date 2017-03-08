@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="view/css/style.css">
         <link rel="stylesheet" href="view/css/fram/bootstrap.min.css">
+        <link rel="stylesheet" href="view/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
