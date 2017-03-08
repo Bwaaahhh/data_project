@@ -12,5 +12,5 @@ $name = $result->star_name;
 
 $res = $planete->getSameStarPlanete($name);
 
-$tableau = array( "planete" => $result, "system" => $res);
+$tableau = array( "planete" => $result, "systeme" => $res);
 echo json_encode($tableau);

@@ -45,6 +45,7 @@ $(document).ready(function() {
 		$('#prev').on('click',function(e) {
 				e.preventDefault();
 				var idplanete = $('#idplanet').html();
+				$('#samestarplanets').html("");
 				$('#popup').animate({left: '5000px'});
 				$('#popup').css({display: 'none'});
 				$('#popup').css({left: '-10000px'});
@@ -65,10 +66,13 @@ $(document).ready(function() {
 					$('#annee').html(res.planete['discovered']);
 					$('#methode').html(res.planete['detection_type']);
 					$('#systeme').html(res.planete['star_name']);
-					// for (var i = 0 in res.system['nom']) {
-						// console.log('coucou');
-						$('#samestarplanets').html(res.system['nom']);
-					
+					for(i = 0; i<res.systeme.length; i++){
+						console.log('coucou');
+						if ( res.planete['nom'] !== res.systeme[i]['nom']) {
+							$('#samestarplanets').append(res.systeme[i]['nom']);
+							$('#samestarplanets').append('<br>')
+						}
+					}
 					$('#masse').html(res.planete.mass);
 					$('#rayon').html(res.planete.radius);
 					$('#periode').html(res.planete.orbital_period);
@@ -82,7 +86,7 @@ $(document).ready(function() {
 					$('#starrayon').html(res.planete.star_radius);
 					$('#startemp').html(res.planete.star_teff);
 					$('#type').html(res.planete.star_sp_type);
-					console.log(res.system['nom']);
+					console.log(res.systeme['nom']);
                     },
                 });
             });	

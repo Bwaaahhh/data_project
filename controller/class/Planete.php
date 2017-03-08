@@ -87,7 +87,7 @@ class Planete{
         // $query -> execute(array(
             // "starName" => $starName
         // ));
-        return $query->fetch();
+        return $query->fetchAll();
     }
 
     public function getSpecialPlanetebySelect($methode,$select,$count){
