@@ -148,7 +148,6 @@ $(document).ready(function(){
     });
 
     $('#methodeRecherche').on('click', function(){
-        $('#choixSelect').css('visibility' , 'visible');
         if($('.pMethodeRecherche').css('visibility') === 'hidden'){
             $('.pMethodeRecherche').css('visibility' ,'visible');
         }else{
@@ -186,15 +185,15 @@ $(document).ready(function(){
     });
     $('.pMethodeRecherche').on('click' , function(){
         let methode = $(this).attr("methode");
-        console.log(methode);
         var methodeSelect = "";
         $('#methode').val(methode);
+        $('#choixSelect').css('visibility' , 'visible');
         if(methode == "Primary" ){
-            methodeSelect = "de ne voir que celles détectées par primary";
+            methodeSelect = "de ne voir que celles détectées par la méthode du transit";
         }else if(methode == "Radial"){
-            methodeSelect = "de ne voir que celles détectées par radial";
+            methodeSelect = "de ne voir que celles détectées par la méthode de vitesse radiale";
         }else if(methode == "Imaging"){
-            methodeSelect = "de ne voir que celles détectées par images";
+            methodeSelect = "de ne voir que celles détectées par l'effet de microlentille gravitationnelle";
         }
         $('#methodde').html(methodeSelect);
         choix2 = 1 ;

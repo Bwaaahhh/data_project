@@ -41,9 +41,9 @@
 				</div>
 				<div class="parametre col-md-2">
 					<p class="facteur" id="methodeRecherche">Par méthode de découverte</p>
-					<p methode="Primary" class="pMethodeRecherche">Primary Transit</p>
-					<p methode="Radial" class="pMethodeRecherche">Radial Velocity</p>
-					<p methode="Imaging" class="pMethodeRecherche">Imaging</p>
+					<p methode="Primary" class="pMethodeRecherche">Transit</p>
+					<p methode="Radial" class="pMethodeRecherche">Vitesse Radiale</p>
+					<p methode="Imaging" class="pMethodeRecherche">Microlentille Gravitationnelle</p>
 				</div>
 			</div>
 			<div class="row justify-content-center">
