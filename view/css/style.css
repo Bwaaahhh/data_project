@@ -53,14 +53,18 @@ body {
 header {
   background-color: rgba(2, 22, 2, 0.3); }
 
+header #logo {
+  margin-top: 2%; }
+
 header h1 {
   color: white;
+  margin-top: 17%;
   text-transform: uppercase;
   font-size: 2em; }
 
 header #zoneRecherche {
   position: relative;
-  margin-top: 10px; }
+  margin-top: 22%; }
 
 header #resultRecherche {
   position: absolute;
@@ -76,6 +80,18 @@ header .planeteGeneree {
 header .planeteGeneree:hover {
   cursor: pointer;
   color: red; }
+
+header #recherche {
+  padding: 8px 15px;
+  background: rgba(50, 50, 50, 0.6);
+  border: 0px solid #dbdbdb;
+  border-radius: 25%; }
+
+#recherche:focus {
+  background-color: rgba(0, 0, 0, 0.8);
+  outline: 0 none;
+  /* Pour enlever la "bordure" jaune qu'ajoute Google Chrome au focus */
+  color: #fff; }
 
 body {
   background-image: url("../images/bg2.jpg");
