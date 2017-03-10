@@ -31,7 +31,7 @@ $(document).ready(function(){
 					$('#idplanet').html(res.planete['id']);
 					$('#nom').html(res.planete.nom);
 					$('#annee').html(res.planete['discovered']);
-					$('#methode').html(res.planete['detection_type']);
+					$('#methodeeee').html(res.planete['detection_type']);
 					$('#systeme').html(res.planete['star_name']);
                     for(i = 0; i<res.systeme.length; i++){
                         if(res.systeme[i]['nom'] !== res.planete['nom']){
@@ -60,6 +60,7 @@ $(document).ready(function(){
 
     $('#formSelect').submit(function(e){
         $('#count').val(count);
+        $('#popup').fadeIn();
         e.preventDefault();
         var donnee = $(this).serialize();
         console.log(donnee);
@@ -68,8 +69,33 @@ $(document).ready(function(){
             url : 'controller/recupSelect.php',
             data : donnee,
             success : function(result){
-                let rechercheSelect = jQuery.parseJSON(result);
-                console.log(rechercheSelect);
+                var res = jQuery.parseJSON(result);
+                console.log(res);
+                console.log(res.detection_type);
+                $('#idplanet').html(res.id);
+                $('#nom').html(res.nom);
+                $('#annee').html(res.discovered);
+                $('#methodeeee').html(res.detection_type);
+                $('#systeme').html(res.star_name);
+                // for(i = 0; i<res.systeme.length; i++){
+                //     if(res.systeme[i]['nom'] !== res.planete['nom']){
+                //         $('#samestarplanets').append(res.systeme[i]['nom']);
+                //         $('#samestarplanets').append('<br >');
+                //     }
+                // }
+                $('#masse').html(res.mass);
+                $('#rayon').html(res.radius);
+                $('#periode').html(res.orbital_period);
+                $('#tcalc').html(res.temp_calculated);
+                $('#tmes').html(res.temp_measured);
+                $('#molecules').html(res.molecules);
+                $('#starnom').html(res.star_name);
+                $('#distance').html(res.star_distance);
+                $('#starage').html(res.star_age);
+                $('#starmasse').html(res.star_mass);
+                $('#starrayon').html(res.star_radius);
+                $('#startemp').html(res.star_teff);
+                $('#type').html(res.star_sp_type);
             }
         });
     });
@@ -117,13 +143,6 @@ $(document).ready(function(){
     $('.parametre p').on('click' , function(){
         let methode = $(this).attr("methode");
         $('#methode').val(methode);
-    });
-    $('#next').on('click' , function(){
-        count += 1 ;
-        console.log(count);
-    });
-    $('#prev').on('click' , function(){
-        count -=1 ;
     });
 
 
