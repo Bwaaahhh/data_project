@@ -19,11 +19,21 @@ body {
 
 #picture {
   width: 200px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  padding: 0px; }
+
+.planets {
+  padding: 0px; }
+
+.nextbutton {
+  padding-left: 10px; }
 
 #image {
   width: 100%;
   border: dotted 2px #15c115; }
+
+#prev, #next {
+  width: 100%; }
 
 #close {
   width: 30px;

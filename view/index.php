@@ -59,10 +59,10 @@
 		<?php foreach ($result as $row) :?>
 		<div class='planetdata'>
 			<div class='row'>
-					<div class='offset-md-1 col-md-3' id='picture'>
+					<div class='offset-md-1 col-md-4' id='picture'>
 						<img id="image" src="" />
 					</div>
-					<div class='data1 offset-md-2 col-md-6'>
+					<div class='data1 offset-md-1 col-md-6'>
 					<p id='id'><span id='idplanet'><?= $row->id ?></span></p>
 					<p>Nom :<span id='nom'><?= $row->nom ?></span></p>
 					<p>Année de découverte : <span id='annee'><?= $row->discovered ?></span></p>
@@ -77,7 +77,7 @@
 					</div>
 			</div>
 			<div class='data2 row'>
-				<div class='offset-md-1 col-md-4'>
+				<div class='planets offset-md-1 col-md-5'>
 				<p class='titre'>Données planétaires</p>
 					<p>Masse : <span id='masse'><?= $row->mass ?> M(jupiter)</span></p>
 					<p>Rayon : <span id='rayon'><?= $row->radius ?> R(jupiter)</span></p>
@@ -96,7 +96,7 @@
 
 					<p>Molécules détectées : <span id='molecules'><?= $row->molecules ?></span></p>
 				</div>
-				<div class='offset-md-1 col-md-6'>
+				<div class='col-md-6'>
 					<div class='stardata'>
 					<p class='titre'>Données stellaires</p>
 					<p>Nom : <span id='starnom'><?= $row->star_name ?></span></p>
@@ -110,9 +110,15 @@
 				</div>
 			</div>
 		</div>
-
-		<button id='next' id_next="<?=$row->id+1?>">Planète Suivante</button>
-		<button id='prev' id_prev="<?=$row->id-1?>">Planète Précédente</button>
+		<div class='row'>
+			<div class='col-md-2'>
+				<img id='prev' id_prev="<?=$row->id-1?>" src='view/images/prev_button.png'/>
+				<p class='prevbutton'>Précédent</p>
+			</div>
+			<div class='offset-md-8 col-md-2'>
+				<img id='next' id_next="<?=$row->id+1?>" src='view/images/next_button.png'/>
+				<p class='nextbutton'>Suivant</p>
+			</div>
 		</div>
 		<?php endforeach; ?>
 </div>
