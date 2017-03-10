@@ -4,3 +4,5 @@ vendor/*
 pdo.php
 view/css/.sass-cache/*
 *.scssc
+style.css
+style.css.map
