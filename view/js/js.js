@@ -3,6 +3,7 @@ $(document).ready(function(){
         const recherche = $(this).val();
         if(recherche === ""){
             $('.planeteGeneree').html("");
+            $('#resultRecherche').css('visibility' , 'hidden');
         }else{
             $.ajax({
                 method: "post",
@@ -10,6 +11,7 @@ $(document).ready(function(){
                 data : {recherche : recherche},
                 success : function(result){
                     $('#resultRecherche').html(result);
+                    $('#resultRecherche').css('visibility' , 'visible');
                 }
             });
         }
@@ -151,4 +153,11 @@ $(document).ready(function(){
         console.log('pouet');
     });
 
+//     $('#resultRecherche').css('visibility' , 'hidden');
+// if($('#resultRecherche').html() !== ""){
+//     $('#resultRecherche').css('visibility' , 'visible');
+// }
+// else{
+//     $('#resultRecherche').css('visibility' , 'visible');
+// }
 });
