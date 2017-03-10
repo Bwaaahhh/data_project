@@ -64,7 +64,7 @@
 		<div class='planetdata'>
 			<div class='row'>
 					<div class='offset-md-1 col-md-4' id='picture'>
-						<img id="image" src="" />
+						<img id="image" src="view/images/<?= $image->picturename ?>" />
 					</div>
 					<div class='data1 offset-md-1 col-md-6'>
 					<p id='id'><span id='idplanet'><?= $row->id ?></span></p>
@@ -98,7 +98,7 @@
 						: <span class='nd' >Non défini</span></p>
 					<?php }?>
 
-					<p>Molécules détectées 
+					<p>Molécules détectées
 					<?php if($row->molecules != ""){ ?>
 						: <span id='molecules'><?= $row->molecules ?></span></p>
 					<?php }else{?>
