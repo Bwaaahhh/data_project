@@ -66,7 +66,7 @@
 					<p id='id'><span id='idplanet'><?= $row->id ?></span></p>
 					<p>Nom :<span id='nom'><?= $row->nom ?></span></p>
 					<p>Année de découverte : <span id='annee'><?= $row->discovered ?></span></p>
-					<p>Méthode de détection : <span id='methode'><?= $row->detection_type ?></span></p>
+					<p>Méthode de détection : <span id='methodeeee'><?= $row->detection_type ?></span></p>
 					<p>Système stellaire : <span id='systeme'><?= $row->star_name ?></span></p>
 					<?php $sister = $planete->getSameStarPlanete($row->star_name); ?>
 					<p>Planète(s) soeur(s)</p>

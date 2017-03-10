@@ -1,9 +1,11 @@
-$(document).ready(function() { 	
-		
+$(document).ready(function() {
+
 		$('#pop').on('click',function() {
-		$('#popup').fadeIn()
+		$('.presentation').fadeOut();
+		$('#popup').delay(500).fadeIn();
 		});
-		 $('#close').on('click',function() { 
-		 $('#popup').fadeOut()   
+		 $('#close').on('click',function() {
+		 $('#popup').fadeOut();
+		 $('.presentation').delay(500).fadeIn();
 		 });
  });
