@@ -29,7 +29,7 @@ $(document).ready(function() {
 			$('#idplanet').html(res.planete['id']);
 			$('#nom').html(res.planete['nom']);
 			$('#annee').html(res.planete['discovered']);
-			$('#methode').html(res.planete['detection_type']);
+			$('#methodeeee').html(res.planete['detection_type']);
 			$('#systeme').html(res.planete['star_name']);
 			for(i = 0; i<res.systeme.length; i++){
 				if ( res.planete['nom'] !== res.systeme[i]['nom']) {
@@ -71,7 +71,7 @@ $(document).ready(function() {
 			$('#idplanet').html(res.planete['id']);
 			$('#nom').html(res.planete['nom']);
 			$('#annee').html(res.planete['discovered']);
-			$('#methode').html(res.planete['detection_type']);
+			$('#methodeeee').html(res.planete['detection_type']);
 			$('#systeme').html(res.planete['star_name']);
 			for(i = 0; i<res.systeme.length; i++){
 				if ( res.planete['nom'] !== res.systeme[i]['nom']) {

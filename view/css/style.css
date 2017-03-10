@@ -50,6 +50,9 @@ body {
 #popup .data2 {
   margin-top: 10px; }
 
+header {
+  background-color: rgba(2, 22, 2, 0.3); }
+
 header h1 {
   color: white;
   text-transform: uppercase;
@@ -62,11 +65,13 @@ header #zoneRecherche {
 header #resultRecherche {
   position: absolute;
   top: 40px;
-  color: white; }
+  color: white;
+  background-color: rgba(6, 3, 5, 0.8); }
 
 header .planeteGeneree {
   margin: 0;
-  z-index: 9999; }
+  position: relative;
+  z-index: 100; }
 
 header .planeteGeneree:hover {
   cursor: pointer;
