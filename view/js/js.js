@@ -84,14 +84,12 @@ $(document).ready(function(){
         $('.parametre .pMethodeRecherche').css('visibility' , 'hidden');
         e.preventDefault();
         var donnee = $(this).serialize();
-        console.log(donnee);
         $.ajax({
             method : 'post',
             url : 'controller/recupSelect.php',
             data : donnee,
             success : function(result){
                 var res = jQuery.parseJSON(result);
-                console.log(res);
                 $('#idplanet').html(res.id);
                 $('#nom').html(res.nom);
                 $('#annee').html(res.discovered);
