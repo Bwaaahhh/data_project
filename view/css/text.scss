@@ -1,0 +1,22 @@
+.presentation .parametre p{
+    cursor: pointer;
+}
+.presentation .parametre p{
+    font-family: 'Orbitron';
+}
+.presentation .parametre p:hover{
+    color: red;
+}
+#choixSelect{
+    visibility: hidden;
+}
+.buttonRecherche{
+    visibility: hidden;
+    padding:8px 15px;
+    background:rgba(50, 50, 50, 0.6);
+    border:0px solid #dbdbdb;
+    border-radius: 25%;
+}
+.buttonRecherche:focus {
+	outline: 0 none; /* Pour enlever la "bordure" jaune qu'ajoute Google Chrome au focus */
+}

@@ -8,7 +8,10 @@
 			<p>Si tu veux te laisser guider dans l'immensitée de l'espace c'est par ici  <button id='pop'>Afficher popup</button></p>
 		</div>
 		<div class="row justify-content-center">
-				<p>Tu peux aussi affiner tes recherches en nous disant les planètes que tu préfères voir. </p>
+			<p>Tu peux aussi affiner tes recherches en nous disant les planètes que tu préfères voir. </p>
+		</div>
+		<div class="row justify-content-center">
+			<p id="choixSelect">Tu as choisi <span id="methodde"></span><span id="multiSelect"></span><span id="selectt"></span></p>
 		</div>
 		<div class="selectionParametre">
 			<div class="row">
@@ -43,12 +46,13 @@
 					<p methode="Imaging" class="pMethodeRecherche">Imaging</p>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row justify-content-center">
 				<form class="" action="" method="post" id="formSelect">
-					<input type="text" name="select" value="" id="select"/>
-					<input type="text" name="methode" value="" id="methode"/>
-					<input type="text" name="count" value="" id="count" />
-					<button type="submit" name="selection" id="selection">Envoyer</button>
+					<input type="hidden" name="select" value="" id="select"/>
+					<input type="hidden" name="methode" value="" id="methode"/>
+					<input type="hidden" name="count" value="" id="count" />
+					<button class="buttonRecherche" type="button" name="button" id='annulerRecherche'>Annuler la sélection de recherche</button>
+					<button class="buttonRecherche" type="submit" name="selection" id="selection">Envoyer</button>
 				</form>
 			</div>
 		</div>

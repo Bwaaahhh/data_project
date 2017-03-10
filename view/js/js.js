@@ -25,6 +25,14 @@ $(document).ready(function(){
         $('#samestarplanets').html("");
         $('.presentation').fadeOut();
 		$('#popup').delay(500).fadeIn();
+        $('#multiSelect').html('');
+        $('#selectt').html('');
+        $('#methodde').html('');
+        $('#choixSelect').css('visibility' , 'hidden');
+        $('.buttonRecherche').css('visibility' , 'hidden');
+        $('.parametre img').css('visibility' , 'hidden');
+        $('.parametre .pMethodeRecherche').css('visibility' , 'hidden');
+        $('#resultRecherche').css('visibility' , 'hidden');
         $.ajax({
             method: "post",
             url: 'controller/recherchePlaneteUnique.php',
@@ -66,6 +74,13 @@ $(document).ready(function(){
         $('.presentation').fadeOut();
 		$('#popup').delay(500).fadeIn();
         $('#samestarplanets').html("");
+        $('#multiSelect').html('');
+        $('#selectt').html('');
+        $('#methodde').html('');
+        $('#choixSelect').css('visibility' , 'hidden');
+        $('.buttonRecherche').css('visibility' , 'hidden');
+        $('.parametre img').css('visibility' , 'hidden');
+        $('.parametre .pMethodeRecherche').css('visibility' , 'hidden');
         e.preventDefault();
         var donnee = $(this).serialize();
         console.log(donnee);
@@ -133,6 +148,7 @@ $(document).ready(function(){
     });
 
     $('#methodeRecherche').on('click', function(){
+        $('#choixSelect').css('visibility' , 'visible');
         if($('.pMethodeRecherche').css('visibility') === 'hidden'){
             $('.pMethodeRecherche').css('visibility' ,'visible');
         }else{
@@ -140,24 +156,62 @@ $(document).ready(function(){
         }
     });
 
+    var choix1 = 0 ;
+    var choix2 = 0 ;
+
     $('.parametre img').on('click' , function(e){
+        $('#choixSelect').css('visibility' , 'visible');
         let select = $(this).attr("select") ;
+        var textSelect = "" ;
         $('#select').val(select);
+        if(select == "poidAsc" ){
+            textSelect = " de trier les planètes en commencant par les plus légères" ;
+        }else if(select == "poidDesc"){
+            textSelect = " de trier les planètes en commencant par les plus lourdes" ;
+        }else if(select == "tempAsc"){
+            textSelect = " de trier les planètes en commencant les plus froides" ;
+        }else if(select == "tempDesc"){
+            textSelect = " de trier les planètes en commencant les plus chaudes" ;
+        }else if(select == "anneeAsc"){
+            textSelect = " de trier les planètes en commencant par celles découverte il y a le plus longtemps" ;
+        }else if(select == "anneeDesc"){
+            textSelect = " de trier les planètes en commencant par celles découverte il y a le moins longtemps" ;
+        }
+        $('#selectt').html(textSelect);
+        choix1 = 1 ;
+        $('.buttonRecherche').css('visibility' , 'visible');
+        if(choix1 === 1 && choix2 === 1){
+            $('#multiSelect').html(' et');
+        }
     });
-    $('.parametre p').on('click' , function(){
+    $('.pMethodeRecherche').on('click' , function(){
         let methode = $(this).attr("methode");
+        console.log(methode);
+        var methodeSelect = "";
         $('#methode').val(methode);
+        if(methode == "Primary" ){
+            methodeSelect = "de ne voir que celles détectées par primary";
+        }else if(methode == "Radial"){
+            methodeSelect = "de ne voir que celles détectées par radial";
+        }else if(methode == "Imaging"){
+            methodeSelect = "de ne voir que celles détectées par images";
+        }
+        $('#methodde').html(methodeSelect);
+        choix2 = 1 ;
+        if(choix1 === 1 && choix2 === 1){
+            $('#multiSelect').html(' et ');
+        }
+        $('.buttonRecherche').css('visibility' , 'visible');
     });
 
-    $('#close').on('click' , function(){
-        console.log('pouet');
+    $('#annulerRecherche').click(function(){
+        $('#multiSelect').html('');
+        $('#selectt').html('');
+        $('#methodde').html('');
+        $('#choixSelect').css('visibility' , 'hidden');
+        $('.buttonRecherche').css('visibility' , 'hidden');
+        $('.parametre img').css('visibility' , 'hidden');
+        $('.parametre .pMethodeRecherche').css('visibility' , 'hidden');
     });
 
-//     $('#resultRecherche').css('visibility' , 'hidden');
-// if($('#resultRecherche').html() !== ""){
-//     $('#resultRecherche').css('visibility' , 'visible');
-// }
-// else{
-//     $('#resultRecherche').css('visibility' , 'visible');
-// }
 });

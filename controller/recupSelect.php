@@ -42,7 +42,14 @@ if(isset($_POST['select'])){
     }
 
     $result = $planete->getSpecialPlanetebySelect($methode,$select,$count);
-    echo json_encode($result);
+    $name = $result->star_name;
+    $res = $planete->getSameStarPlanete($name);
+
+    $array = array(
+        "planete" => $result,
+        "systeme" => $res,
+    );
+    echo json_encode($array);
 }
 
 
