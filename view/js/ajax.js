@@ -4,6 +4,7 @@ $(document).ready(function() {
         $('#next').on('click',function(e) {
 				e.preventDefault();
 				var idplanete = $('#idplanet').html();
+				$('#samestarplanets').html("");
 				var origin = $('#popup').css({left: '15%'});
 				$('#popup').animate({left: '-5000px'});
 				$('#popup').css({display: 'none'});

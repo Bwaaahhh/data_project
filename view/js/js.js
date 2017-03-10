@@ -28,6 +28,8 @@ $(document).ready(function(){
             data: {search : search},
             success : function(result){
                 let res = jQuery.parseJSON(result);
+				console.log(res);
+					$('#image').attr('src','view/images/'+res.picture["picturename"]);
 					$('#idplanet').html(res.planete['id']);
 					$('#nom').html(res.planete.nom);
 					$('#annee').html(res.planete['discovered']);

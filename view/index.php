@@ -60,7 +60,7 @@
 		<div class='planetdata'>
 			<div class='row'>
 					<div class='offset-md-1 col-md-3' id='picture'>
-						<img src=''>
+						<img id="image" src="" />
 					</div>
 					<div class='data1 offset-md-2 col-md-6'>
 					<p id='id'><span id='idplanet'><?= $row->id ?></span></p>

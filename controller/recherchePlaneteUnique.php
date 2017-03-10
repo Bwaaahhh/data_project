@@ -11,9 +11,12 @@ $result = $planete->GetSpecialPlanete($recherche);
 $name = $result->star_name;
 $res = $planete->getSameStarPlanete($name);
 
+$resimage = $planete->getImagePlanete($name);
+
 $array = array(
     "planete" => $result,
     "systeme" => $res,
+	"picture" => $resimage
 );
 
 echo json_encode($array);

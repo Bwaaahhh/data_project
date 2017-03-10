@@ -21,10 +21,12 @@ display: none;
 }
 
 #picture {
-background-color: rgba(2, 22, 2, 1);
 width: 200px;
-height: 250px;
 border-radius : 5px;
+}
+
+#image{
+width: 100%;
 border : dotted 2px #15c115;
 }
 
