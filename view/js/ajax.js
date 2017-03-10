@@ -20,6 +20,7 @@ $(document).ready(function() {
                     success : function(result) {
 					var res = jQuery.parseJSON(result);
 					console.log(res);
+					$('#image').attr('src','view/images/'+res.picture["picturename"]);
 					$('#idplanet').html(res.planete['id']);
 					$('#nom').html(res.planete['nom']);
 					console.log(res.planete['nom']);
@@ -68,6 +69,7 @@ $(document).ready(function() {
                     success : function(result) {
 					var res = jQuery.parseJSON(result);
 					console.log(res);
+					$('#image').attr('src','view/images/'+res.picture["picturename"]);
 					$('#idplanet').html(res.planete['id']);
 					$('#nom').html(res.planete['nom']);
 					console.log(res.planete['nom']);

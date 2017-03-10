@@ -11,6 +11,9 @@ $result = $planete->getPrevPlanete($idplanete);
 $name = $result->star_name;
 
 $res = $planete->getSameStarPlanete($name);
+$resimage = $planete->getImagePlanete($name);
 
-$tableau = array( "planete" => $result, "systeme" => $res);
+$tableau = array( 	"planete" => $result, 
+					"systeme" => $res,
+					"picture" => $resimage);
 echo json_encode($tableau);

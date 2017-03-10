@@ -22,6 +22,9 @@ body {
   border-radius: 5px;
   padding: 0px; }
 
+span .nd {
+  color: #15c115; }
+
 .planets {
   padding: 0px; }
 
