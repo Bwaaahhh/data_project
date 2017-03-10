@@ -38,7 +38,7 @@
               <div class="col-md-2" id="logo">
                   <img src="view/images/plan.svg" alt="logo">
               </div>
-              <div class="col-md-2 offset-md-3 ">
+              <div class="col-md-2 offset-md-2 ">
                 <h1>ExoLook</h1>
               </div>
               <div class="col-md-3 offset-md-2">

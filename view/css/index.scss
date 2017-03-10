@@ -6,7 +6,7 @@
 .presentation .parametre{
     margin-top: 10%;
     position: relative;
-    cursor: pointer;
+    // cursor: pointer;
 }
 .presentation img{
     visibility: hidden;
@@ -19,7 +19,7 @@
     top : -100px;
 }
 .selectionParametre .parametre:last-child{
-    margin-bottom: 10%;
+    margin-bottom: 1%;
 }
 .presentation .pMethodeRecherche{
     visibility: hidden;
