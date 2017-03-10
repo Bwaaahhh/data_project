@@ -119,7 +119,12 @@
 					<?php }else{?>
 						: <span class='nd' >Non défini</span></p>
 					<?php }?>
-					<p>Type spectral : <span id='type'><?= $row->star_sp_type ?> <span></p>
+					<p>Type spectral 
+					<?php if($row->star_sp_type != ""){ ?>
+						: <span id='type'><?= $row->star_sp_type ?> <span></p>
+					<?php }else{?>
+						: <span class='nd' >Non défini</span></p>
+					<?php }?>
 					</div>
 				</div>
 			</div>
