@@ -5,7 +5,7 @@
 			recencées.</p>
 		</div>
 		<div class="row justify-content-center">
-			<p>Si tu veux te laisser guider dans l'immensitée de l'espace c'est par  <button id='pop' class="btn btn-outline-warning active">ICI</button></p>
+			<p>Si tu veux te laisser guider dans l'immensitée de l'espace c'est par  <button id='pop'>ICI</button></p>
 		</div>
 		<div class="row justify-content-center">
 			<p>Tu peux aussi affiner tes recherches en nous disant les planètes que tu préfères voir. </p>
