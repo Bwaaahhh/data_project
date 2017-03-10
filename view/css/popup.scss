@@ -21,11 +21,30 @@ display: none;
 }
 
 #picture {
-background-color: rgba(2, 22, 2, 1);
 width: 200px;
-height: 250px;
 border-radius : 5px;
+padding: 0px;
+}
+
+span .nd {
+color: #15c115;
+}
+
+.planets {
+padding: 0px;
+}
+
+.nextbutton {
+padding-left: 10px;
+}
+
+#image{
+width: 100%;
 border : dotted 2px #15c115;
+}
+
+#prev, #next {
+width: 100%;
 }
 
 #close {

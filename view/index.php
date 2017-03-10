@@ -63,17 +63,17 @@
 		<?php foreach ($result as $row) :?>
 		<div class='planetdata'>
 			<div class='row'>
-					<div class='offset-md-1 col-md-3' id='picture'>
-						<img src=''>
+					<div class='offset-md-1 col-md-4' id='picture'>
+						<img id="image" src="" />
 					</div>
-					<div class='data1 offset-md-2 col-md-6'>
+					<div class='data1 offset-md-1 col-md-6'>
 					<p id='id'><span id='idplanet'><?= $row->id ?></span></p>
-					<p>Nom :<span id='nom'><?= $row->nom ?></span></p>
+					<p>Nom : <span id='nom'><?= $row->nom ?></span></p>
 					<p>Année de découverte : <span id='annee'><?= $row->discovered ?></span></p>
 					<p>Méthode de détection : <span id='methodeeee'><?= $row->detection_type ?></span></p>
 					<p>Système stellaire : <span id='systeme'><?= $row->star_name ?></span></p>
 					<?php $sister = $planete->getSameStarPlanete($row->star_name); ?>
-					<p>Planète(s) soeur(s)</p>
+					<p>Planète(s) soeur(s) :</p>
 					<?php foreach ($sister as $sis) :?>
 
 						<p><span id='samestarplanets'<?= $sis->nom ?></p>
@@ -81,42 +81,58 @@
 					</div>
 			</div>
 			<div class='data2 row'>
-				<div class='offset-md-1 col-md-4'>
+				<div class='planets offset-md-1 col-md-5'>
 				<p class='titre'>Données planétaires</p>
-					<p>Masse : <span id='masse'><?= $row->mass ?> M(jupiter)</span></p>
-					<p>Rayon : <span id='rayon'><?= $row->radius ?> R(jupiter)</span></p>
-					<p>Période orbitale : <span id='periode'><?= $row->orbital_period ?></span></p>
+					<p>Masse : <span id='masse'><?= $row->mass ?></span> M(jupiter)</p>
+					<p>Rayon : <span id='rayon'><?= $row->radius ?> </span> R(jupiter)</p>
+					<p>Période orbitale : <span id='periode'><?= $row->orbital_period ?></span> année(s)</p>
 					<p>Température
 					<?php if($row->temp_calculated != '0'){ ?>
 
-						calculée : <span id='tcalc'><?= $row->temp_calculated ?>K</span></p>
+						calculée : <span id='tcalc'><?= $row->temp_calculated ?></span> K</p>
 
 					<?php }elseif($row->temp_measured != '0') { ?>
 
-						mesurée : <span id='tmes'><?= $row->temp_measured ?>K</span></p>
+						mesurée : <span id='tmes'><?= $row->temp_measured ?></span> K</p>
 					<?php }else{?>
-						: Non défini </p>
+						: <span class='nd' >Non défini</span></p>
 					<?php }?>
 
-					<p>Molécules détectées : <span id='molecules'><?= $row->molecules ?></span></p>
+					<p>Molécules détectées 
+					<?php if($row->molecules != ""){ ?>
+						: <span id='molecules'><?= $row->molecules ?></span></p>
+					<?php }else{?>
+						: <span class='nd' >Non défini</span></p>
+					<?php }?>
 				</div>
-				<div class='offset-md-1 col-md-6'>
+				<div class='col-md-6'>
 					<div class='stardata'>
 					<p class='titre'>Données stellaires</p>
-					<p>Nom : <span id='starnom'><?= $row->star_name ?></span></p>
-					<p>Distance planète-étoile : <span id='distance'><?= $row->star_distance ?> parsec(s)</span></p>
-					<p>Age : <span id='starage'><?= $row->star_age ?> Ga</span></p>
-					<p>Masse : <span id='starmasse'><?= $row->star_mass ?> M(soleil)</span></p>
-					<p>Rayon : <span id='starrayon'><?= $row->star_radius ?> R(soleil)</span></p>
-					<p>Température : <span id='startemp'><?= $row->star_teff ?> K</span></p>
-					<p>Type spectral : <span id='type'><?= $row->star_sp_type ?> K<span></p>
+					<p>Nom de l'étoile : <span id='starnom'><?= $row->star_name ?></span></p>
+					<p>Distance planète-étoile : <span id='distance'><?= $row->star_distance ?></span> parsec(s)</p>
+					<p>Age : <span id='starage'><?= $row->star_age ?></span> Ga</p>
+					<p>Masse : <span id='starmasse'><?= $row->star_mass ?></span> M(soleil)</p>
+					<p>Rayon : <span id='starrayon'><?= $row->star_radius ?> </span> R(soleil)</p>
+					<p>Température de l'étoile
+					<?php if($row->star_teff != '0'){ ?>
+						: <span id='startemp'><?= $row->star_teff ?> </span> K</p>
+					<?php }else{?>
+						: <span class='nd' >Non défini</span></p>
+					<?php }?>
+					<p>Type spectral : <span id='type'><?= $row->star_sp_type ?> <span></p>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<button id='next' id_next="<?=$row->id+1?>">Planète Suivante</button>
-		<button id='prev' id_prev="<?=$row->id-1?>">Planète Précédente</button>
+		<div class='row'>
+			<div class='col-md-2'>
+				<img id='prev' id_prev="<?=$row->id-1?>" src='view/images/prev_button.png'/>
+				<p class='prevbutton'>Précédent</p>
+			</div>
+			<div class='offset-md-8 col-md-2'>
+				<img id='next' id_next="<?=$row->id+1?>" src='view/images/next_button.png'/>
+				<p class='nextbutton'>Suivant</p>
+			</div>
 		</div>
 		<?php endforeach; ?>
 </div>

@@ -7,6 +7,13 @@ class Planete{
         $query = $dbh->query('SELECT * FROM planete ORDER BY RAND() LIMIT 1 ');
         return $query->fetchAll();
     }
+	
+	public function getImagePlanete(){
+		global $dbh;
+		$query = $dbh->query('SELECT picturename FROM imagesplanetes ORDER BY RAND() LIMIT 1');
+        return $query->fetch();
+		
+	}
 
     public function getNextPlanete($idplanete){
         global $dbh;
