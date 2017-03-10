@@ -1,6 +1,7 @@
 $(document).ready(function() {
-
+console.log('pouet');
 		$('#pop').on('click',function() {
+			console.log('lala');
 			$('.presentation').fadeOut();
 			$('#popup').delay(500).fadeIn();
 			$('#multiSelect').html('');
