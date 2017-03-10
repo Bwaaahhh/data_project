@@ -5,7 +5,7 @@
 			recencées.</p>
 		</div>
 		<div class="row justify-content-center">
-			<p>Si tu veux te laisser guider dans l'immensitée de l'espace c'est par ici  <button id='pop'>Afficher popup</button></p>
+			<p>Si tu veux te laisser guider dans l'immensitée de l'espace c'est par  <button id='pop' class="btn btn-outline-warning active">ICI</button></p>
 		</div>
 		<div class="row justify-content-center">
 			<p>Tu peux aussi affiner tes recherches en nous disant les planètes que tu préfères voir. </p>
@@ -15,31 +15,31 @@
 		</div>
 		<div class="selectionParametre">
 			<div class="row">
-				<div class="parametre col-md-2">
+				<div class="parametre col-md-2 par">
 					<p class="facteur" id="facteurMasse">Par masse</p>
 					<img class="plus" select="poidDesc" id="imagePoid" src="view/images/kilo.png" alt="">
 					<img class="moins" select="poidAsc" id="imagePlume" src="view/images/plume.png" alt="">
 				</div>
-				<div class="parametre col-md-1">
-					<p>ou</p>
+				<div class="parametre col-md-1 par">
+					<p class="par">ou</p>
 				</div>
-				<div class="parametre col-md-2">
+				<div class="parametre col-md-2 par">
 					<p class="facteur" id="facteurTemp">Par Température</p>
 					<img class="plus" select="tempDesc" id="imageChaud" src="view/images/chaleur.png" alt="">
 					<img class="moins" select="tempAsc" id="imageFroid" src="view/images/flocon.png" alt="">
 				</div>
-				<div class="parametre col-md-1">
-					<p>ou</p>
+				<div class="parametre col-md-1 par">
+					<p class="par">ou</p>
 				</div>
-				<div class="parametre col-md-2">
+				<div class="parametre col-md-2 par">
 					<p class="facteur" id="facteurAnnee">Par année de découverte</p>
 					<img class="plus" select="anneeDesc" id="imageVieux" src="view/images/dino.png" alt="">
 					<img class="moins" select="anneeAsc" id="imageJeune" src="view/images/alien.png" alt	="">
 				</div>
 				<div class="parametre col-md-1">
-					<p>et / ou</p>
+					<p class="par">et / ou</p>
 				</div>
-				<div class="parametre col-md-2">
+				<div class="parametre col-md-2 par">
 					<p class="facteur" id="methodeRecherche">Par méthode de découverte</p>
 					<p methode="Primary" class="pMethodeRecherche">Transit</p>
 					<p methode="Radial" class="pMethodeRecherche">Vitesse Radiale</p>
