@@ -83,8 +83,18 @@
 			<div class='data2 row'>
 				<div class='planets offset-md-1 col-md-5'>
 				<p class='titre'>Données planétaires</p>
-					<p>Masse : <span id='masse'><?= $row->mass ?></span> M(jupiter)</p>
-					<p>Rayon : <span id='rayon'><?= $row->radius ?> </span> R(jupiter)</p>
+					<p>Masse 
+					<?php if($row->mass != '0'){ ?>
+					: <span id='masse'><?= $row->mass ?></span> M(jupiter)</p>
+					<?php }else{?>
+						: <span class='nd' >< 1</span> M(jupiter)</p>
+					<?php }?>
+					<p>Rayon : 
+					<?php if($row->radius != '0'){ ?>
+					<span id='rayon'><?= $row->radius ?> </span> R(jupiter)</p>
+					<?php }else{?>
+						: <span class='nd' >< 1</span> R(jupiter)</p>
+					<?php }?>
 					<p>Période orbitale : <span id='periode'><?= $row->orbital_period ?></span> année(s)</p>
 					<p>Température
 					<?php if($row->temp_calculated != '0'){ ?>
@@ -110,9 +120,24 @@
 					<p class='titre'>Données stellaires</p>
 					<p>Nom de l'étoile : <span id='starnom'><?= $row->star_name ?></span></p>
 					<p>Distance planète-étoile : <span id='distance'><?= $row->star_distance ?></span> parsec(s)</p>
-					<p>Age : <span id='starage'><?= $row->star_age ?></span> Ga</p>
-					<p>Masse : <span id='starmasse'><?= $row->star_mass ?></span> M(soleil)</p>
-					<p>Rayon : <span id='starrayon'><?= $row->star_radius ?> </span> R(soleil)</p>
+					<p>Age 
+					<?php if($row->star_age != '0'){ ?>
+					: <span id='starage'><?= $row->star_age ?></span> Ga</p>
+					<?php }else{?>
+						: <span class='nd' >Non défini</span></p>
+					<?php }?>
+					<p>Masse 
+					<?php if($row->star_mass != '0'){ ?>
+					: <span id='starmasse'><?= $row->star_mass ?></span> M(soleil)</p>
+					<?php }else{?>
+						: <span class='nd' >< 1</span> M(soleil)</p>
+					<?php }?>
+					<p>Rayon 
+					<?php if($row->star_radius != '0'){ ?>
+					: <span id='starrayon'><?= $row->star_radius ?> </span> R(soleil)</p>
+					<?php }else{?>
+						: <span class='nd' >< 1</span> R(soleil)</p>
+					<?php }?>
 					<p>Température de l'étoile
 					<?php if($row->star_teff != '0'){ ?>
 						: <span id='startemp'><?= $row->star_teff ?> </span> K</p>
