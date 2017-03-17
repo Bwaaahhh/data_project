@@ -2,6 +2,7 @@
 .ftpconfig
 vendor/*
 pdo.php
-.sass-cache
-
+view/css/.sass-cache/*
 *.scssc
+style.css
+style.css.map
