@@ -89,31 +89,32 @@ $(document).ready(function(){
             url : 'controller/recupSelect.php',
             data : donnee,
             success : function(result){
+                console.log(result);
                 var res = jQuery.parseJSON(result);
-                $('#idplanet').html(res.id);
-                $('#nom').html(res.nom);
-                $('#annee').html(res.discovered);
-                $('#methodeeee').html(res.detection_type);
-                $('#systeme').html(res.star_name);
+                $('#idplanet').html(res.planete.id);
+                $('#nom').html(res.planete.nom);
+                $('#annee').html(res.planete.discovered);
+                $('#methodeeee').html(res.planete.detection_type);
+                $('#systeme').html(res.planete.star_name);
                 for(i = 0; i<res.systeme.length; i++){
                     if(res.systeme[i].nom !== res.planete.nom){
                         $('#samestarplanets').append(res.systeme[i].nom);
                         $('#samestarplanets').append('<br >');
                     }
                 }
-                $('#masse').html(res.mass);
-                $('#rayon').html(res.radius);
-                $('#periode').html(res.orbital_period);
-                $('#tcalc').html(res.temp_calculated);
-                $('#tmes').html(res.temp_measured);
-                $('#molecules').html(res.molecules);
-                $('#starnom').html(res.star_name);
-                $('#distance').html(res.star_distance);
-                $('#starage').html(res.star_age);
-                $('#starmasse').html(res.star_mass);
-                $('#starrayon').html(res.star_radius);
-                $('#startemp').html(res.star_teff);
-                $('#type').html(res.star_sp_type);
+                $('#masse').html(res.planete.mass);
+                $('#rayon').html(res.planete.radius);
+                $('#periode').html(res.planete.orbital_period);
+                $('#tcalc').html(res.planete.temp_calculated);
+                $('#tmes').html(res.planete.temp_measured);
+                $('#molecules').html(res.planete.molecules);
+                $('#starnom').html(res.planete.star_name);
+                $('#distance').html(res.planete.star_distance);
+                $('#starage').html(res.planete.star_age);
+                $('#starmasse').html(res.planete.star_mass);
+                $('#starrayon').html(res.planete.star_radius);
+                $('#startemp').html(res.planete.star_teff);
+                $('#type').html(res.planete.star_sp_type);
             }
         });
     });
