@@ -171,5 +171,26 @@
 </div>
 <div id='poplexique'>
 <img id="closelexique" src='view/images/close.png'>
+<h2>Lexique</h2>
+<p><span>M(soleil) :</span> Masse du soleil, soit 1,9891×10^30 kg.</p>
+<p><span>R(soleil) :</span> Rayon du soleil, soit 695 700 km.</p>
+<p><span>M(soleil) :</span> Masse de Jupiter, soit 1,898×10^27 kg.</p>
+<p><span>R(soleil) :</span> Rayon du Jupiter, soit 69 911 km.</p>
+
+<p><span>Méthodes de découverte :</span>
+Actuellement, il existe plusieurs méthodes pour pouvoir détecter les exoplanètes.</p>
+
+<p><span class='soustitre'>Radial Velocity (Vitesse radiale) : </span>
+C'est la méthode qui a permis de découvrir la plupart des exoplanètes connues. Cette méthode consiste à mesurer, grâce à un spectrographe, l'éloignement ou le rapprochement d'une étoile dû à la présence d'une planète orbitant autour.</p>
+<p><span class='soustitre'>Transit : </span>
+Cette méthode consiste à mesurer la luminosité d'une étoile. Si celle-ci baisse de façon périodique, cela peut supposer la présence d'une planète, qui occulte régulièrement cette luminosité lors de son passage devant l'étoile.</p>
+<p><span class='soustitre'>Microlentilles gravitationnelles (Microlensing / Imaging) : </span>
+Méthode permettant de découvrir les planètes grace aux microlentilles gravitionnelles, phénomène physique qui découle de la déviation de la lumière due à la présence d'un corps à fort champ gravitationnel.</p>
+<p><span>Période orbitale : </span>
+Temps nécessaire à une planète pour effectuer une orbite complète autour de son étoile.</p>
+<p> <span>Type spectral : </span>
+Indice en fonction de la couleur et de la température de l'étoile. 
+Dans l'ordre, de la plus chaude à la plus froide (du bleu au rouge en passant par le blanc) :
+O, B, A, F, G, K, M, L, T, Y.</p>
 </div>
 
