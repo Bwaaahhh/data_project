@@ -14,4 +14,21 @@ $(document).ready(function() {
 			$('#popup').fadeOut();
 		 	$('.presentation').delay(500).fadeIn();
 		 });
+		 
+		 $('#lexic').on('click',function() {
+			$('.presentation').fadeOut();
+			$('#poplexique').delay(500).fadeIn();
+			$('#multiSelect').html('');
+	        $('#selectt').html('');
+	        $('#methodde').html('');
+			$('#choixSelect').css('visibility' , 'hidden');
+			$('.buttonRecherche').css('visibility' , 'hidden');
+	        $('.parametre img').css('visibility' , 'hidden');
+	        $('.parametre .pMethodeRecherche').css('visibility' , 'hidden');
+		});
+		 $('#closelexique').on('click',function() {
+			$('#poplexique').fadeOut();
+		 	$('.presentation').delay(500).fadeIn();
+		 });
+		 
  });
