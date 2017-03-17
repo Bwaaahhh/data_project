@@ -1,6 +1,23 @@
 $(document).ready(function() {
 
     var count = 0 ;
+    var methodee = 0;
+
+
+    $('#pop').on('click' , function(){
+        console.log('normal');
+        methodee = 1;
+    });
+    $('#resultRecherche ').on('click' , function(){
+        console.log('normal');
+        methodee = 1;
+    });
+
+    $('#selection').on('click' , function(){
+        console.log('select');
+        methodee = 0 ;
+    });
+
 
     $('#next').on('click' , function(){
         count += 1 ;
@@ -18,12 +35,14 @@ $(document).ready(function() {
 				$('#popup').css({left: '10000px'});
 				$('#popup').css({display: "block"});
 				$('#popup').animate({left: '15%'});
-
+                var seelectt = $('#select').val();
+                var methode =$('#methode').val();
                 $.ajax({
                     type : "post",
                     url: "controller/getnext.php",
-                    data: {idplanete : idplanete},
+                    data: {idplanete : idplanete , methodee : methodee , count : count , select : seelectt , methode : methode },
                     success : function(result) {
+                        console.log(result);
 					var res = jQuery.parseJSON(result);
 					$('#image').attr('src','view/images/'+res.picture["picturename"]);
 					$('#idplanet').html(res.planete['id']);
@@ -62,12 +81,16 @@ $(document).ready(function() {
 				$('#popup').css({left: '-10000px'});
 				$('#popup').css({display: "block"});
 				$('#popup').animate({left: '15%'});
+                var seelectt = $('#select').val();
+                var methode =$('#methode').val();
+
 
                 $.ajax({
                     type : "post",
                     url: "controller/getprev.php",
-                    data: {idplanete : idplanete},
+                    data: {idplanete : idplanete , methodee : methodee , count : count , select : seelectt , methode : methode },
                     success : function(result) {
+                        console.log(result);
 					var res = jQuery.parseJSON(result);
 					$('#image').attr('src','view/images/'+res.picture["picturename"]);
 					$('#idplanet').html(res.planete['id']);
