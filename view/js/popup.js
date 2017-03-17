@@ -16,7 +16,7 @@ $(document).ready(function() {
 		 	$('.presentation').delay(500).fadeIn();
 		 });
 		 
-		 $('#lexique').on('click',function() {
+		 $('#lexic').on('click',function() {
 			$('.presentation').fadeOut();
 			$('#poplexique').delay(500).fadeIn();
 			$('#multiSelect').html('');

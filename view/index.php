@@ -8,7 +8,7 @@
 			<p>Si tu veux te laisser guider dans l'immensitée de l'espace c'est par  <button id='pop' class="">ICI</button></p>
 		</div>
 		<div class="row justify-content-center">
-			<p>Pour mieux comprendre les données qui te sont présentées, tu peux consulter le lexique :<button id='lexique' class="">?</button></p>
+			<p>Pour mieux comprendre les données qui te sont présentées, tu peux consulter le lexique :<img id='lexic' class="" src='view/images/lexique.png'/></p>
 		</div>
 		<div class="row justify-content-center">
 			<p>Tu peux aussi affiner tes recherches en nous disant les planètes que tu préfères voir. </p>
@@ -175,7 +175,7 @@
 <p><span>M(soleil) :</span> Masse du soleil, soit 1,9891×10^30 kg.</p>
 <p><span>R(soleil) :</span> Rayon du soleil, soit 695 700 km.</p>
 <p><span>M(soleil) :</span> Masse de Jupiter, soit 1,898×10^27 kg.</p>
-<p><span>R(soleil) :</span> Rayon du Jupiter, soit 69 911 km.</p>
+<p><span>R(soleil) :</span> Rayon de Jupiter, soit 69 911 km.</p>
 
 <p><span>Méthodes de découverte :</span>
 Actuellement, il existe plusieurs méthodes pour pouvoir détecter les exoplanètes.</p>

@@ -28,6 +28,7 @@ overflow-x : hidden;
 	top: 10%;
 	left: 15%;
 	z-index: 5;
+	overflow: hidden;
 }
 
 #poplexique h2 {
@@ -52,6 +53,11 @@ overflow-x : hidden;
 	font-family: 'Orbitron';
 	font-size: 16px;
 	color: #9c9e9c;
+}
+
+#lexic {
+	visibility: visible;
+	width: 4%;
 }
 
 #id {
