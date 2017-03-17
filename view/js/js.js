@@ -89,7 +89,6 @@ $(document).ready(function(){
             url : 'controller/recupSelect.php',
             data : donnee,
             success : function(result){
-                console.log(result);
                 var res = jQuery.parseJSON(result);
                 $('#idplanet').html(res.planete.id);
                 $('#nom').html(res.planete.nom);
