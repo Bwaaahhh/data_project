@@ -16,6 +16,20 @@ overflow-x : hidden;
 	z-index: 5;
 }
 
+#poplexique {
+	display: none;
+	background-color: rgba(72, 73, 72, 0.8);
+	padding: 20px;
+	width:70%;
+	border-radius: 10px;
+	float: left;
+	font-size: 1.2em;
+	position: relative;
+	top: 10%;
+	left: 15%;
+	z-index: 5;
+}
+
 #id {
 display: none;
 }
@@ -48,6 +62,11 @@ width: 100%;
 }
 
 #close {
+width: 30px;
+float : right;
+}
+
+#closelexique {
 width: 30px;
 float : right;
 }

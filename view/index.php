@@ -5,7 +5,10 @@
 			recencées.</p>
 		</div>
 		<div class="row justify-content-center">
-			<p>Si tu veux te laisser guider dans l'immensitée de l'espace c'est par  <button id='pop' class="btn btn-outline-warning active">ICI</button></p>
+			<p>Si tu veux te laisser guider dans l'immensitée de l'espace c'est par  <button id='pop' class="">ICI</button></p>
+		</div>
+		<div class="row justify-content-center">
+			<p>Pour mieux comprendre les données qui te sont présentées, tu peux consulter le lexique :<button id='lexique' class="">?</button></p>
 		</div>
 		<div class="row justify-content-center">
 			<p>Tu peux aussi affiner tes recherches en nous disant les planètes que tu préfères voir. </p>
@@ -166,3 +169,7 @@
 		</div>
 		<?php endforeach; ?>
 </div>
+<div id='poplexique'>
+<img id="closelexique" src='view/images/close.png'>
+</div>
+
