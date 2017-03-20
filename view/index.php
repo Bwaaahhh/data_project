@@ -5,7 +5,7 @@
 			recencées.</p>
 		</div>
 		<div class="row justify-content-center">
-			<p>Si tu veux te laisser guider dans l'immensitée de l'espace c'est par  <button id='pop' class="">ICI</button></p>
+			<p>Si tu veux te laisser guider dans l'immensitée de l'espace c'est par  <button id='popp' class="">ICI</button></p>
 		</div>
 		<div class="row justify-content-center">
 			<p>Pour mieux comprendre les données qui te sont présentées, tu peux consulter le lexique :<img id='lexic' class="" src='view/images/lexique.png'/></p>
