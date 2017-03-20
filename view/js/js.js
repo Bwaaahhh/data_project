@@ -54,36 +54,76 @@ $(document).ready(function(){
             data: {search : search},
             success : function(result){
                 let res = jQuery.parseJSON(result);
-					$('#image').attr('src','view/images/'+res.picture["picturename"]);
-					$('#idplanet').html(res.planete['id']);
-					$('#nom').html(res.planete.nom);
-					$('#annee').html(res.planete.discovered);
-					$('#methodeeee').html(res.planete.detection_type);
-					$('#systeme').html(res.planete.star_name);
-                    for(i = 0; i<res.systeme.length; i++){
-                        if(res.systeme[i].nom !== res.planete.nom){
-                            $('#samestarplanets').append(res.systeme[i].nom);
-                            $('#samestarplanets').append('<br >');
-                        }
+				$('#image').attr('src','view/images/'+res.picture["picturename"]);
+				$('#idplanet').html(res.planete['id']);
+				$('#nom').html(res.planete.nom);
+				$('#annee').html(res.planete.discovered);
+				$('#methodeeee').html(res.planete.detection_type);
+				$('#systeme').html(res.planete.star_name);
+                for(i = 0; i<res.systeme.length; i++){
+                    if(res.systeme[i].nom !== res.planete.nom){
+                        $('#samestarplanets').append(res.systeme[i].nom);
+                        $('#samestarplanets').append('<br >');
                     }
-					$('#masse').html(res.planete.mass);
-                    if(res.planete.radius != '0'){
-                        $('#rayon').html(res.planete.radius + 'R(jupiter)');
-                    }else{
-                        $('#rayon').html("Non défini");
-                    }
-					$('#rayon').html(res.planete.radius);
-					$('#periode').html(res.planete.orbital_period);
-					$('#tcalc').html(res.planete.temp_calculated);
-					$('#tmes').html(res.planete.temp_measured);
-					$('#molecules').html(res.planete.molecules);
-					$('#starnom').html(res.planete.star_name);
-					$('#distance').html(res.planete.star_distance);
-					$('#starage').html(res.planete.star_age);
-					$('#starmasse').html(res.planete.star_mass);
-					$('#starrayon').html(res.planete.star_radius);
-					$('#startemp').html(res.planete.star_teff);
-					$('#type').html(res.planete.star_sp_type);
+                }
+                if(res.planete.mass != '0'){
+                    $('#rayon').html(res.planete.mass);
+                }else{
+                    $('#rayon').html("Non défini");
+                }
+                if(res.planete.radius != '0'){
+                    $('#rayon').html(res.planete.radius);
+                }else{
+                    $('#rayon').html("Non défini");
+                }
+                if(res.planete.orbital_period != '0'){
+                    $('#periode').html(res.planete.orbital_period);
+                }else{
+                    $('#periode').html("Non défini");
+                }
+                if(res.planete.temp_calculated != '0'){
+                    $('#tcalc').html(res.planete.temp_calculated);
+                }else if(res.planete.temp_measured != '0'){
+                    $('#tcalc').html(res.planete.temp_measured);
+                }else{
+                    $('#tcalc').html("Non défini");
+                }
+                if(res.planete.molecules !== ""){
+                    $('#molecules').html(res.planete.molecules);
+                }else{
+                    $('#molecules').html("Non défini");
+                }
+                $('#starnom').html(res.planete.star_name);
+                if(res.planete.star_distance != "0"){
+                    $('#distance').html(res.planete.star_distance);
+                }else{
+                    $('#distance').html("Non défini");
+                }
+                if(res.planete.star_age != '0'){
+                    $('#starage').html(res.planete.star_age);
+                }else{
+                    $('#starage').html("Non défini");
+                }
+                if(res.planete.star_mass != '0'){
+                    $('#starmasse').html(res.planete.star_mass);
+                }else{
+                    $('#starmasse').html("Non défini");
+                }
+                if(res.planete.star_radius != '0'){
+                    $('#starrayon').html(res.planete.star_radius);
+                }else{
+                    $('#starrayon').html("Non défini");
+                }
+                if(res.planete.star_teff != '0'){
+                    $('#startemp').html(res.planete.star_teff);
+                }else{
+                    $('#startemp').html("Non défini");
+                }
+                if(res.planete.star_sp_type !== ""){
+                    $('#type').html(res.planete.star_sp_type);
+                }else{
+                    $('#type').html("Non défini");
+                }
             }
         });
     });
@@ -126,23 +166,64 @@ $(document).ready(function(){
                         $('#samestarplanets').append('<br >');
                     }
                 }
-                $('#masse').html(res.planete.mass);
+                if(res.planete.mass != '0'){
+                    $('#rayon').html(res.planete.mass);
+                }else{
+                    $('#rayon').html("Non défini");
+                }
                 if(res.planete.radius != '0'){
                     $('#rayon').html(res.planete.radius);
                 }else{
                     $('#rayon').html("Non défini");
                 }
-                $('#periode').html(res.planete.orbital_period);
-                $('#tcalc').html(res.planete.temp_calculated);
-                $('#tmes').html(res.planete.temp_measured);
-                $('#molecules').html(res.planete.molecules);
+                if(res.planete.orbital_period != '0'){
+                    $('#periode').html(res.planete.orbital_period);
+                }else{
+                    $('#periode').html("Non défini");
+                }
+                if(res.planete.temp_calculated != '0'){
+                    $('#tcalc').html(res.planete.temp_calculated);
+                }else if(res.planete.temp_measured != '0'){
+                    $('#tcalc').html(res.planete.temp_measured);
+                }else{
+                    $('#tcalc').html("Non défini");
+                }
+                if(res.planete.molecules !== ""){
+                    $('#molecules').html(res.planete.molecules);
+                }else{
+                    $('#molecules').html("Non défini");
+                }
                 $('#starnom').html(res.planete.star_name);
-                $('#distance').html(res.planete.star_distance);
-                $('#starage').html(res.planete.star_age);
-                $('#starmasse').html(res.planete.star_mass);
-                $('#starrayon').html(res.planete.star_radius);
-                $('#startemp').html(res.planete.star_teff);
-                $('#type').html(res.planete.star_sp_type);
+                if(res.planete.star_distance != "0"){
+                    $('#distance').html(res.planete.star_distance);
+                }else{
+                    $('#distance').html("Non défini");
+                }
+                if(res.planete.star_age != '0'){
+                    $('#starage').html(res.planete.star_age);
+                }else{
+                    $('#starage').html("Non défini");
+                }
+                if(res.planete.star_mass != '0'){
+                    $('#starmasse').html(res.planete.star_mass);
+                }else{
+                    $('#starmasse').html("Non défini");
+                }
+                if(res.planete.star_radius != '0'){
+                    $('#starrayon').html(res.planete.star_radius);
+                }else{
+                    $('#starrayon').html("Non défini");
+                }
+                if(res.planete.star_teff != '0'){
+                    $('#startemp').html(res.planete.star_teff);
+                }else{
+                    $('#startemp').html("Non défini");
+                }
+                if(res.planete.star_sp_type !== ""){
+                    $('#type').html(res.planete.star_sp_type);
+                }else{
+                    $('#type').html("Non défini");
+                }
             }
         });
     });

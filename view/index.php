@@ -103,7 +103,6 @@
 				<div class='planets offset-md-1 col-md-5'>
 				<p class='titre'>Données planétaires</p>
 					<p>Masse
-						<?= $row->mass ?>
 					<?php if($row->mass != 0){ ?>
 					: <span id='masse'><?= $row->mass ?></span> M(jupiter)</p>
 					<?php }else{?>
@@ -111,9 +110,9 @@
 					<?php }?>
 					<p>Rayon
 					<?php if($row->radius != '0'){ ?>
-					<span id='rayon'><?= $row->radius ?> R(jupiter)</span> </p>
+					<span id='rayon'><?= $row->radius ?></span> R(jupiter) </p>
 					<?php }else{?>
-						: <span id='rayon' class='nd' >< 1 R(jupiter)</span> </p>
+						: <span id='rayon' class='nd' >< 1  </span> R(jupiter) </p>
 					<?php }?>
 					<p>Période orbitale : <span id='periode'><?= $row->orbital_period ?></span> année(s)</p>
 					<p>Température
@@ -123,9 +122,9 @@
 
 					<?php }elseif($row->temp_measured != '0') { ?>
 
-						mesurée : <span id='tmes'><?= $row->temp_measured ?></span> K</p>
+						mesurée : <span id='tcalc'><?= $row->temp_measured ?></span> K</p>
 					<?php }else{?>
-						: <span id='tmes' class='nd' >Non défini</span></p>
+						: <span id='tcalc' class='nd' >Non défini</span> K</p>
 					<?php }?>
 
 					<p>Molécules détectées
@@ -144,7 +143,7 @@
 					<?php if($row->star_age != '0'){ ?>
 					: <span id='starage'><?= $row->star_age ?></span> Ga</p>
 					<?php }else{?>
-						: <span id='starage' class='nd' >Non défini</span></p>
+						: <span id='starage' class='nd' >Non défini</span> Ga</p>
 					<?php }?>
 					<p>Masse
 					<?php if($row->star_mass != '0'){ ?>
