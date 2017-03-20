@@ -82,10 +82,10 @@
 		<?php foreach ($result as $row) :?>
 		<div class='planetdata'>
 			<div class='row'>
-					<div class='offset-md-1 col-md-4' id='picture'>
+					<div class='offset-lg-1 col-lg-4 col-md-12 col-sm-12 col-xs-12' id='picture'>
 						<img id="image" src="view/images/<?= $image->picturename ?>" />
 					</div>
-					<div class='data1 offset-md-1 col-md-6'>
+					<div class='data1 offset-lg-1 col-lg-6 col-md-12 col-sm-12 col-xs-12'>
 					<p id='id'><span id='idplanet'><?= $row->id ?></span></p>
 					<p>Nom : <span id='nom'><?= $row->nom ?></span></p>
 					<p>Année de découverte : <span id='annee'><?= $row->discovered ?></span></p>
@@ -174,11 +174,11 @@
 			</div>
 		</div>
 		<div class='row'>
-			<div class='col-md-2'>
+			<div class='col-md-2 col-sm-6 col-xs-6'>
 				<img id='prev' id_prev="<?=$row->id-1?>" src='view/images/prev_button.png'/>
 				<p class='prevbutton'>Précédent</p>
 			</div>
-			<div class='offset-md-8 col-md-2'>
+			<div class='offset-md-8 col-md-2 col-sm-6 col-xs-6'>
 				<img id='next' id_next="<?=$row->id+1?>" src='view/images/next_button.png'/>
 				<p class='nextbutton'>Suivant</p>
 			</div>
