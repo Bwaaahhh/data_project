@@ -127,3 +127,52 @@ border : dotted 2px #15c115;
 #popup .data2{
 margin-top: 10px;
 }
+
+@media screen and (max-width: 900px){
+	#popup p {
+		font-size: 14px;
+	}
+	p.titre{
+		font-size: 20px;
+	}
+	div.data1{
+		margin-top: 2em;
+	}
+	#popup div {
+		text-align: center;
+	}
+	img#close {
+		position: absolute;
+		z-index: 7;
+		margin-left: 85%;
+	}
+	
+	img#prev, img#next {
+		width: 50%;
+	}
+	
+	#image{
+	
+		margin-top: 2em;
+	}
+	
+	
+}
+
+@media screen and (max-width: 500px){
+	img#prev, img#next {
+		width: 25%;
+	}
+	#image{
+		margin-left: 50px;
+		margin-right: auto;
+		display: block;
+	}
+	
+	img#close {
+		position: absolute;
+		z-index: 7;
+		margin-left: 75%;
+	}
+
+}
