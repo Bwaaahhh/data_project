@@ -57,7 +57,11 @@ $(document).ready(function() {
 						}
 					}
 					$('#masse').html(res.planete.mass);
-					$('#rayon').html(res.planete.radius);
+                    if(res.planete.radius != '0'){
+                        $('#rayon').html(res.planete.radius);
+                    }else{
+                        $('#rayon').html("Non défini");
+                    }
 					$('#periode').html(res.planete.orbital_period);
 					$('#tcalc').html(res.planete.temp_calculated);
 					$('#tmes').html(res.planete.temp_measured);
@@ -105,7 +109,11 @@ $(document).ready(function() {
 						}
 					}
 					$('#masse').html(res.planete.mass);
-					$('#rayon').html(res.planete.radius);
+                    if(res.planete.radius != '0'){
+                        $('#rayon').html(res.planete.radius);
+                    }else{
+                        $('#rayon').html("Non défini");
+                    }
 					$('#periode').html(res.planete.orbital_period);
 					$('#tcalc').html(res.planete.temp_calculated);
 					$('#tmes').html(res.planete.temp_measured);
