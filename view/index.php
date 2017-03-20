@@ -77,7 +77,7 @@
 
 
 <div id="popup" class="">
-	<?php	include ("controller/get_methods.php"); ?>
+	<?php	include ("controller/getMethods.php"); ?>
 	<img id="close" src='view/images/close.png'>
 		<?php foreach ($result as $row) :?>
 		<div class='planetdata'>
