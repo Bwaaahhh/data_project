@@ -4,6 +4,11 @@
 
 
 $(document).ready(function(){
+    $('body').on('click' , function(){
+        $('.planeteGeneree').html("");
+        $('#recherche').val("");
+        $('#resultRecherche').css('visibility' , 'hidden');
+    });
     $('#recherche').keyup(function(){
         const recherche = $(this).val();
         if(recherche === ""){
