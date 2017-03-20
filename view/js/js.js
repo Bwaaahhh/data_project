@@ -1,3 +1,8 @@
+
+
+// ////////////////////////    FONCTION POUR LAUTO COMPLETION   ///////////////////////////////
+
+
 $(document).ready(function(){
     $('#recherche').keyup(function(){
         const recherche = $(this).val();
@@ -17,6 +22,11 @@ $(document).ready(function(){
         }
 
     });
+
+
+//////////////////////////// GENERATION DE LA POP UP QUAND CLIC SUR UN DES RESULTATS DE RECHERCHE    ////////////////////////
+
+
 
     $('.resultRecherche').on('click', ".planeteGeneree" ,function(){
         const search = $(this).html();
@@ -73,6 +83,11 @@ $(document).ready(function(){
         });
     });
 
+
+    //////////////////////////// GENERATION DE LA POP UP QUAND CLIC RECHERCHE PAR FILTRE    ////////////////////////
+
+
+
     var count = 0 ;
 
     $('#formSelect').submit(function(e){
@@ -94,7 +109,6 @@ $(document).ready(function(){
             url : 'controller/recupSelect.php',
             data : donnee,
             success : function(result){
-                console.log(result);
                 var res = jQuery.parseJSON(result);
                 $('#idplanet').html(res.planete.id);
                 $('#nom').html(res.planete.nom);
@@ -127,6 +141,12 @@ $(document).ready(function(){
             }
         });
     });
+
+
+
+//     /////////////////////////   GESTION APPARITION DES IMAGES POUR FILTRE       /////////
+
+
 
     $('#facteurMasse').on('click', function(){
         if($('#imagePoid').css('visibility') === 'hidden'){
@@ -164,8 +184,17 @@ $(document).ready(function(){
         }
     });
 
-    var choix1 = 0 ;
-    var choix2 = 0 ;
+
+
+
+    var choix1 = 0 ;    //    /////////    MISE EN PLACE DES VARIABLES POUR GESTION
+    var choix2 = 0 ;    //   /////////     COMPORTEMENT DES BOUTONS DE LA POPUP
+
+
+
+    // ////////////////////////////// APPARITION ET GESTION DU TEXTE SELON LES FILTRE CHOISI       ///////////////////
+
+
 
     $('.parametre img').on('click' , function(e){
         $('#choixSelect').css('visibility' , 'visible');
@@ -211,6 +240,12 @@ $(document).ready(function(){
         }
         $('.buttonRecherche').css('visibility' , 'visible');
     });
+
+
+
+//   ////////////      GESTION DU BOUTONS POUR REINITIALISER LES FILTRES   ///////////
+
+
 
     $('#annulerRecherche').click(function(){
         $('#multiSelect').html('');

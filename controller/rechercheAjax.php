@@ -7,6 +7,11 @@ $recherche = $_POST['recherche'];
 
 $planete = new Planete();
 
+
+
+/////////////    APPEL DE LA METHODE POUR AUTOCOMPLETION
+
+
 $result = $planete->searchPlanete($recherche);
 $count = count($result);
 if($count < 1){

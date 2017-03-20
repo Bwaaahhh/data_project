@@ -8,6 +8,8 @@ $planete = new Planete();
 $result = $planete->GetSpecialPlanete($recherche);
 
 
+/////////     APPEL DES METHODES POUR RECUPERATION PLANETE , PLANETES SOEURS , IMAGE
+
 $name = $result->star_name;
 $res = $planete->getSameStarPlanete($name);
 
