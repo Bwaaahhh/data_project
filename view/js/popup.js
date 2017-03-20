@@ -1,5 +1,5 @@
 $(document).ready(function() {
-		$('#pop').on('click',function() {
+		$('.ici').on('click',function() {
 			$('.presentation').fadeOut();
 			$('#popup').delay(500).fadeIn();       //    GESTION DE LAPPARITION DE LA POPUP
 			$('#multiSelect').html('');            //    ET DISPARITION DES TEXTES QUAND CLIC SUR
