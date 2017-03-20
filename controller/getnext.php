@@ -4,6 +4,7 @@ require_once ('class/Planete.php');
 
 $planete = new Planete();
 
+//    GESTION COMPORTEMENT DU BOUTON SUIVANT
 
 if($_POST['methodee'] == 1){
 
@@ -23,6 +24,9 @@ if($_POST['methodee'] == 1){
 						"picture" => $resimage);
 	echo json_encode($tableau);
 }else{
+
+	// RECUPERATION DES FILTRE ENVOYÉS, MODIFICATION DE VARIABLES POUR APPEL DE LA METHODE
+
 	$methode = "";
     $select = "";
     $count = $_POST['count'];

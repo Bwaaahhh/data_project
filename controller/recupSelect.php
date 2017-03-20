@@ -1,7 +1,10 @@
 <?php
 require_once('pdo.php');
 require_once('class/Planete.php');
+
 $planete = new Planete();
+
+// RECUPERATION DES FILTRE ENVOYÉS, MODIFICATION DE VARIABLES POUR APPEL DE LA METHODE
 
 if(isset($_POST['select'])){
     $methode = "";
@@ -41,13 +44,17 @@ if(isset($_POST['select'])){
         }
     }
 
+/////////     APPEL DES METHODES POUR RECUPERATION PLANETE , PLANETES SOEURS , IMAGE
+
     $result = $planete->getSpecialPlanetebySelect($methode,$select,$count);
     $name = $result->star_name;
     $res = $planete->getSameStarPlanete($name);
+    $resimage = $planete->getImagePlanete($name);
 
     $array = array(
         "planete" => $result,
         "systeme" => $res,
+        "picture" => $resimage
     );
     echo json_encode($array);
 }

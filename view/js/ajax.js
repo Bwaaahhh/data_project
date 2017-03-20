@@ -1,22 +1,30 @@
 $(document).ready(function() {
 
-    var count = 0 ;
+    var count = 0 ;            //      VARIABLES POUR GESTION COMPORTEMENT BOUTONS
     var methodee = 0;
 
 
+
+
+///////////   GESTION DES VARIABLES AU CLIC SUR LES TROIS METHODES DE RECHERCHE
+
+
     $('#pop').on('click' , function(){
-        console.log('normal');
-        methodee = 1;
+        methodee = 1 ;
+        count = 0 ;
     });
     $('#resultRecherche ').on('click' , function(){
-        console.log('normal');
         methodee = 1;
+        count = 0 ;
     });
 
     $('#selection').on('click' , function(){
-        console.log('select');
         methodee = 0 ;
+        count = 0 ;
     });
+
+
+////////////   GESTION DE LA VARIABLE COUNT POUR RECHERCHE CORRECT LORS DE FILTRE
 
 
     $('#next').on('click' , function(){
@@ -25,6 +33,11 @@ $(document).ready(function() {
     $('#prev').on('click' , function(){
         count -=1 ;
     });
+
+
+/////////////    INJECTION DE DONNEES QUAND CLIC SUR BOUTONS PRECEDENT ET SUIVANT
+
+
         $('#next').on('click',function(e) {
 				e.preventDefault();
 				var idplanete = $('#idplanet').html();
@@ -35,14 +48,13 @@ $(document).ready(function() {
 				$('#popup').css({left: '10000px'});
 				$('#popup').css({display: "block"});
 				$('#popup').animate({left: '15%'});
-                var seelectt = $('#select').val();
+                var seelectt = $('#select').val();    // RECUPERATION VALEUR FILTRE
                 var methode =$('#methode').val();
                 $.ajax({
                     type : "post",
                     url: "controller/getnext.php",
                     data: {idplanete : idplanete , methodee : methodee , count : count , select : seelectt , methode : methode },
                     success : function(result) {
-                        console.log(result);
 					var res = jQuery.parseJSON(result);
 					$('#image').attr('src','view/images/'+res.picture["picturename"]);
 					$('#idplanet').html(res.planete['id']);
@@ -87,14 +99,11 @@ $(document).ready(function() {
 				$('#popup').animate({left: '15%'});
                 var seelectt = $('#select').val();
                 var methode =$('#methode').val();
-
-
                 $.ajax({
                     type : "post",
                     url: "controller/getprev.php",
                     data: {idplanete : idplanete , methodee : methodee , count : count , select : seelectt , methode : methode },
                     success : function(result) {
-                        console.log(result);
 					var res = jQuery.parseJSON(result);
 					$('#image').attr('src','view/images/'+res.picture["picturename"]);
 					$('#idplanet').html(res.planete['id']);

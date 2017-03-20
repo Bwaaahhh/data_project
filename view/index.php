@@ -16,6 +16,13 @@
 		<div class="row justify-content-center">
 			<p id="choixSelect">Tu as choisi <span id="methodde"></span><span id="multiSelect"></span><span id="selectt"></span></p>
 		</div>
+
+
+
+<!-- ////////////////////////////////    RECHERCHE PAR FILTRE     ///////////////////////////////////////////////-->
+
+
+
 		<div class="selectionParametre">
 			<div class="row">
 				<div class="parametre col-md-2 par">
@@ -60,6 +67,15 @@
 			</div>
 		</div>
 	</div>
+
+
+
+
+<!--////////////////////////////////// POP UP ET APPEL DE LA PREMIERE METHODE /////////////////////////////////////-->
+
+
+
+
 <div id="popup" class="">
 	<?php	include ("controller/get_methods.php"); ?>
 	<img id="close" src='view/images/close.png'>
@@ -170,6 +186,11 @@
 		</div>
 		<?php endforeach; ?>
 </div>
+
+
+<!-- ///////////////////////////////       DIV DE PRESENTATION      /////////////////////////////////  -->
+
+
 <div id='poplexique'>
 <img id="closelexique" src='view/images/close.png'>
 <h2>Lexique</h2>

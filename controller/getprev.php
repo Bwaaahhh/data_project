@@ -8,24 +8,29 @@ $planete = new Planete();
 $idplanete = $_POST['idplanete'];
 
 
+//    GESTION COMPORTEMENT DU BOUTON PRECEDENT
+
+
 if($_POST['methodee'] == 1){
-	
-$result = $planete->getPrevPlanete($idplanete);
 
+	$result = $planete->getPrevPlanete($idplanete);
+	$name = $result->star_name;
+	$res = $planete->getSameStarPlanete($name);
+	$resimage = $planete->getImagePlanete($name);
 
-$name = $result->star_name;
+	$tableau = array( 	"planete" => $result,
+						"systeme" => $res,
+						"picture" => $resimage);
 
-$res = $planete->getSameStarPlanete($name);
-$resimage = $planete->getImagePlanete($name);
-
-$tableau = array( 	"planete" => $result,
-					"systeme" => $res,
-					"picture" => $resimage);
-echo json_encode($tableau);
+	echo json_encode($tableau);
 
 
 
 }else{
+
+	// RECUPERATION DES FILTRE ENVOYÉS, MODIFICATION DE VARIABLES POUR APPEL DE LA METHODE
+
+
 	$methode = "";
     $select = "";
     $count = $_POST['count'];
